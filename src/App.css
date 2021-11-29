@@ -1,13 +1,13 @@
-
-
 .App {
-  background-color: black;
+  background-color: rgb(138, 129, 129);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./images/paintbrush.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+  width: 100%;
+  /* height: auto;  */
+  overflow: hidden;
 }
 
 /* BANNER */
@@ -102,14 +102,16 @@ nav > ul > li > a {
   flex-wrap: wrap;
   justify-content: center;
   margin: auto 0;
+  /* background-color: black; */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.shop-btn:hover {
+  color: red;
 }
 
 /* SIGN-UP WRAPPER */
-
-/* .signUp-wrapper {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./images/paintbrush.jpg");
-} */
 
 /* FOOTER */
 
@@ -139,6 +141,7 @@ nav > ul > li > a {
 .footer {
   text-align: center;
   color: white;
+  margin-bottom: 0px;
 }
 
 .social {
@@ -183,6 +186,18 @@ nav > ul > li > a {
 .fa-youtube {
   background: #bb0000;
   color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+  border: 2px solid whitesmoke;
+}
+
+.fa-slack {
+  background: black;
+  border: 2px solid purple;
+  color:white;
 }
 
 .fa-instagram {

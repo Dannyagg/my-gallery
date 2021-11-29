@@ -32,11 +32,9 @@ function Shop() {
             {itemCard()}
             {itemCard()}
             {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-
+            
+            
+        
            
             {/* <Ratings rating='2' />
             <Ratings rating='3' />
@@ -52,27 +50,30 @@ function Shop() {
 
         return <Card
 
-            border="primary"
+            // border="primary"
             style={{
                 maxWidth: '20rem',
                 height: '30rem',
                 margin: '10px',
-                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                backgroundColor: 'whitesmoke',
+                padding: "20px",
+                opacity:'1'
             }}>
 
             <Card.Img
                 variant="top" src={beFunky}
                 style={{
-                    maxWidth: '20rem',
-                    height: '15rem',
-                    objectFit: 'fill',
-                    padding: "10px",
+                    maxWidth: '25rem',
+                    height: '20rem',
+                    objectFit: 'fill',         
                 }} />
 
             <Card.Body
 
                 style={{
                     padding: '10px',
+                    // color: 'white'
                 }}>
 
                 <Card.Title>Katana Painting - Japan</Card.Title>
@@ -80,6 +81,7 @@ function Shop() {
                 <Card.Text
 
                     style={{
+                        
                         marginBottom: "10px",
                     }}>
 

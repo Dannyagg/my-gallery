@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import backgroundImage from './images/background.jpg';
+// import backgroundImage from './images/background.jpg';
 // import Comments from './components/Comments';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -11,7 +11,6 @@ import { useState } from 'react';
 
 function App() {
 
-    const lineBreak = <hr />;
     return (
 
         <div className="App">
@@ -61,7 +60,7 @@ function Footer() {
                 </div>
 
                 <div className="social">
-                    <h4> Follow Us </h4>
+                    <h4> Follow art-zibit </h4>
 
                     <a href="https://www.facebook.com/ddenasty" target="_blank" className="fa fa-facebook"></a>
                     <a href="https://twitter.com/SpaceX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" className="fa fa-twitter"></a>

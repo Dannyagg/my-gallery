@@ -40,6 +40,7 @@ function Signup() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '200px',
+                color:'white'
 
             }}>
 
@@ -47,7 +48,8 @@ function Signup() {
                 <Form
                     onSubmit={handleSubmit}
                     style={{
-                        background: 'whitesmoke',
+                        background: 'black',
+                        // opacity: '0.9',
                         marginRight: '5px',
                         marginBottom: '5px',
                         padding: '50px',
@@ -63,7 +65,7 @@ function Signup() {
                             style={{
 
                                 color: '#6f42c1',
-                                textShadow: '4px 4px 4px #aaa',
+                                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                                 marginBottom: '30px'
                             }}
                             > Welcome Back! </h5>
@@ -71,7 +73,7 @@ function Signup() {
                         <h3
                             style={{
                                 color: '#6f42c1',
-                                textShadow: '4px 4px 4px #aaa',
+                                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                                 marginBottom: '30px'
                             }}
                         >Sign In </h3>

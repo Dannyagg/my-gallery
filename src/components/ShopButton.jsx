@@ -18,13 +18,15 @@ function ExploreButton() {
                     style={{
                         textTransform: 'uppercase',
                         borderRadius: '20px',
-                        border: '5px solid purple',
+                        border: '3px solid purple',
                         marginTop: '30px',
                         padding: '15px',
                         width: '250px',
+                        textDecoration:'none',
                         backgroundColor: 'transparent',
-                        backgroundHoverStyle: 'white',
-                        boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)'
+                        color: 'white',
+                        boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                
                     }}>
                     Shop
                 </Button>
