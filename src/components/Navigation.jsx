@@ -36,10 +36,11 @@ export default function Navigation(__props) {
                         </li>
                         
                         <li>
-                            <Link to="/login"> <BiUser />Login / Register</Link>
+                            <Link to="/cart"> Cart <BiCartAlt /></Link>
                         </li>
+
                         <li>
-                            <Link to="/cart"> <BiCartAlt />Cart</Link>
+                            <Link to="/login"> Login / Register <BiUser /></Link>
                         </li>
                     </ul>
 

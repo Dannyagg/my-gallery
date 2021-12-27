@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import ocean from '../images/ocean.jpg';
+// import ocean from '../images/ocean.jpg';
 
 
 
@@ -108,21 +108,21 @@ function Signup() {
                 <Form
                     onSubmit={handleSubmit}
                     style={{
-                        background: 'whitesmoke',
+                        background: 'black',
                         marginRight: '5px',
+                        marginBottom: '5px',
                         padding: '50px',
                         width: '400px',
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         borderRadius: '10px',
-                        marginBottom: '5px'
                     }}>
 
                     <Form.Text className="text-muted">
                         <h3
                             style={{
                                 color: '#6f42c1',
-                                textShadow: '4px 4px 4px #aaa',
+                                // textShadow: '4px 4px 4px #aaa',
                                 marginBottom: '30px'
                             }}
                         > Create Account </h3>

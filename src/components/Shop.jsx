@@ -33,9 +33,7 @@ function Shop() {
             {itemCard()}
             {itemCard()}
             
-            
         
-           
             {/* <Ratings rating='2' />
             <Ratings rating='3' />
             <Ratings rating='4' />

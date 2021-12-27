@@ -1,13 +1,13 @@
 .App {
-  background-color: rgb(138, 129, 129);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-color: rgb(90, 49, 49);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
     url("./images/paintbrush.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: fixed;
   background-size: cover;
   width: 100%;
-  /* height: auto;  */
-  overflow: hidden;
+  height: 120vh; 
+  /* overflow: hidden; */
 }
 
 /* BANNER */
