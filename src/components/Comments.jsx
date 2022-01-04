@@ -36,7 +36,7 @@ function Comments() {
             <h4
                 style={{
                     margin: '10px auto',
-                }}> Get in touch
+                }}> Leave a Comment
 
             </h4>
 
@@ -57,7 +57,7 @@ function Comments() {
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Email Content</Form.Label>
+                    <Form.Label>Comment</Form.Label>
                     <Form.Control 
                     as="textarea" 
                     rows={3} 

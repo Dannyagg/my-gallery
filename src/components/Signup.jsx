@@ -48,8 +48,9 @@ function Signup() {
                 <Form
                     onSubmit={handleSubmit}
                     style={{
-                        background: 'black',
-                        // opacity: '0.9',
+                        background: '#195E59',
+                        // backgroundOpacity: 0.5,
+                        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5))',
                         marginRight: '5px',
                         marginBottom: '5px',
                         padding: '50px',
@@ -61,18 +62,11 @@ function Signup() {
                     }} >
 
                     <Form.Text className="text-muted">
-                        <h5
-                            style={{
-
-                                color: '#6f42c1',
-                                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
-                                marginBottom: '30px'
-                            }}
-                            > Welcome Back! </h5>
+                  
 
                         <h3
                             style={{
-                                color: '#6f42c1',
+                                color: 'white',
                                 textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                                 marginBottom: '30px'
                             }}
@@ -108,7 +102,8 @@ function Signup() {
                 <Form
                     onSubmit={handleSubmit}
                     style={{
-                        background: 'black',
+                        background: '#195E59',
+                        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))',
                         marginRight: '5px',
                         marginBottom: '5px',
                         padding: '50px',
@@ -116,12 +111,13 @@ function Signup() {
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         borderRadius: '10px',
-                    }}>
+
+                    }} >
 
                     <Form.Text className="text-muted">
                         <h3
                             style={{
-                                color: '#6f42c1',
+                                color: 'white',
                                 // textShadow: '4px 4px 4px #aaa',
                                 marginBottom: '30px'
                             }}

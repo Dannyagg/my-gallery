@@ -32,6 +32,22 @@ function Shop() {
             {itemCard()}
             {itemCard()}
             {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
+            {itemCard()}
             
         
             {/* <Ratings rating='2' />

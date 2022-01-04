@@ -48,7 +48,13 @@ export default App;
 
 function Footer() {
     return (
-        <div className="footer">
+        <div className="footer"
+            style={{
+                marginTop: '500px',
+                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+              
+            }}
+        >
             <div className="design-team">
 
                 <p> &#169; DevCorp 2021 | All Rights Reserved.</p>
