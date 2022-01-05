@@ -10,13 +10,15 @@ const About = () => {
             style={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent: 'space-around',
+                justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                // border: '2px solid red',
-                margin: 'auto',
-                padding: '20px',
-                marginBottom: '10px',
+                borderRadius: '20px',
+                // padding:'200px',
+                margin: '100px',
+                padding: '300px',
+                background: '#3F172C',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
 
             }}
         >
@@ -26,8 +28,7 @@ const About = () => {
             <div className="about-photo"
                 style={{
                     marginBottom: '10px',
-                    backgroundColor: 'black',
-                    borderRadius: '20px',
+                    background: 'transparent',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
@@ -35,6 +36,7 @@ const About = () => {
                     flexWrap: 'wrap',
                     boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                     marginLeft: '10px',
+                    borderRight: '1px solid',
 
                 }}
             >
@@ -42,11 +44,12 @@ const About = () => {
 
                     style={{
                         // border: '2px solid red',
-                        borderRadius: '20px',
+                        borderRadius: '10px',
                         margin: '30px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         width: '350px',
                         height: '500px',
+                        border: '2px solid ',
                     }}
                 />
 
@@ -98,26 +101,28 @@ const About = () => {
                 </div>
             </div>
 
+        
+
             {/* ABOUT DAN */}
 
             <div className="about-photo"
                 style={{
                     marginBottom: '10px',
-                    backgroundColor: 'black',
-                    borderRadius: '20px',
+                    background: 'transparent',
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexWrap: 'wrap',
                     boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                    marginLeft: '10px'
+                    marginLeft: '20px',
+                    borderRight: '1px solid ',
                 }}
             >
                 <img src={Dan} alt="Girl in a jacket" width="500" height="600"
 
                     style={{
-                        // border: '2px solid red',
+                        border: '2px solid ',
                         borderRadius: '20px',
                         margin: '30px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',

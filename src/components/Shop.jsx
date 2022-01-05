@@ -22,12 +22,24 @@ function Shop() {
     }
 
     return (
-        <div className="exibit-wrapper">
+        <div className="exibit-wrapper"
 
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
+            style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexWrap: 'wrap',
+                borderRadius: '20px',
+                margin: '100px',
+                padding: '100px',
+                background: '#3F172C',
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
+
+            }}
+
+        >
+
             {itemCard()}
             {itemCard()}
             {itemCard()}
@@ -49,7 +61,6 @@ function Shop() {
             {itemCard()}
             {itemCard()}
             
-        
             {/* <Ratings rating='2' />
             <Ratings rating='3' />
             <Ratings rating='4' />
@@ -66,21 +77,21 @@ function Shop() {
 
             // border="primary"
             style={{
-                maxWidth: '20rem',
-                height: '30rem',
+                maxWidth: '25rem',
                 margin: '10px',
                 boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                backgroundColor: 'whitesmoke',
+                backgroundColor: 'white',
+                borderRadius: '10px',
                 padding: "20px",
-                opacity:'1'
+                opacity: '1'
             }}>
 
             <Card.Img
                 variant="top" src={beFunky}
                 style={{
                     maxWidth: '25rem',
-                    height: '20rem',
-                    objectFit: 'fill',         
+                    height: '15rem',
+                    objectFit: 'fill',
                 }} />
 
             <Card.Body
@@ -95,7 +106,7 @@ function Shop() {
                 <Card.Text
 
                     style={{
-                        
+
                         marginBottom: "10px",
                     }}>
 
@@ -130,7 +141,7 @@ function Shop() {
                 <Ratings rating='' />
             </Card.Body>
         </Card>;
-        
+
     }
 }
 

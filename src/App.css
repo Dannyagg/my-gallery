@@ -6,7 +6,8 @@
   background-position: fixed;
   background-size: cover;
   width: 100%;
-  /* height: vh;  */
+
+  /* height: 100vh;  */
   /* overflow: hidden; */
 }
 
@@ -52,6 +53,7 @@ nav > ul {
   padding-top: 30px;
   text-shadow: 0.05em 0.05em 0.2em rgba(10, 10, 10, 0.9);
   margin-bottom: 100px;
+  padding-top: 100px;
   align-items: center;
   /* background-color: white; */
 }
@@ -214,16 +216,16 @@ nav > ul > li > a {
 
 .about-media > .fa {
   padding: 10px;
-  /* border-radius: 20px; */
   width: auto;
   height: auto;
 }
 
 .email-me {
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .email-me a {
   text-shadow: 0.05em 0.05em 0.2em rgba(10, 10, 10, 0.9);
   text-decoration: none;
+  
 }

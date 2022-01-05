@@ -20,13 +20,13 @@ function ExploreButton() {
                         borderRadius: '20px',
                         // border: '3px solid purple',
                         marginTop: '30px',
-                        padding: '15px',
+                        padding: '25px',
                         width: '250px',
-                        textDecoration:'none',
+                        textDecoration: 'none',
                         // backgroundColor: 'transparent',
                         color: 'white',
                         boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
-                
+
                     }}>
                     SHOP NOW
                 </Button>

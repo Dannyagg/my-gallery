@@ -50,7 +50,7 @@ function Footer() {
     return (
         <div className="footer"
             style={{
-                marginTop: '500px',
+                marginTop: '300px',
                 textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
               
             }}
@@ -115,7 +115,7 @@ function Comments() {
             <h4
                 style={{
                     margin: '10px auto',
-                }}> Get in touch
+                }}> Leave a comment
 
             </h4>
 
@@ -123,7 +123,7 @@ function Comments() {
                 onSubmit={handleSubmit}
             >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>Your email</Form.Label>
                     <Form.Control
                         type="email"
                         // placeholder="enter your email address"
@@ -136,7 +136,7 @@ function Comments() {
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Email Content</Form.Label>
+                    <Form.Label>Comment</Form.Label>
                     <Form.Control
                         as="textarea"
                         rows={3}
@@ -158,13 +158,15 @@ function Comments() {
                         type="submit"
                         size="lg"
                         style={{
-                            padding: '15px',
+                            width: '150px',
+                            padding: '20px',
                             margin: '10px auto',
                             justifyContent: 'center',
-                            boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'
+                            boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px',
+                            borderRadius: '20px',
 
                         }}>
-                        Submit
+                        POST
                     </Button>
                 </Form.Group>
             </Form>
