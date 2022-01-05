@@ -15,7 +15,7 @@ const About = () => {
                 flexWrap: 'wrap',
                 borderRadius: '20px',
                 // padding:'200px',
-                margin: '100px',
+                margin: 'auto',
                 padding: '300px',
                 background: '#3F172C',
                 backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
