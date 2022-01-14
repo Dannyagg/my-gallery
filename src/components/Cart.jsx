@@ -22,14 +22,14 @@ export default function Cart() {
 
             >
 
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
-                <h1> This is the Shopping Cart </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
+                <h1> Shopping Cart  </h1>
 
             </div>
 

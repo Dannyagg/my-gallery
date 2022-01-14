@@ -39,7 +39,7 @@ function Signup() {
                 flexWrap: 'wrap',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '200px',
+                padding: '150px',
                 color:'white'
 
             }}>

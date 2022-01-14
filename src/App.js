@@ -1,13 +1,10 @@
+import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
-// import backgroundImage from './images/background.jpg';
-// import Comments from './components/Comments';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
-// import logo from './images/logo.png';
-// import background from './images/tampabackground.jpg';
-// import backgroundImage from './images/background.jpg';
+
 
 function App() {
 
@@ -15,35 +12,16 @@ function App() {
 
         <div className="App">
             <Navigation />
-            {/* {Banner()} */}
+            
             {Footer()}
             {Comments()}
-            {/* <Comments /> */}
+            
         </div>
 
     );
 }
 
 export default App;
-
-// function Banner() {
-//     return <div className="banner"
-//         style={{
-//             backgroundImage: `url(${backgroundImage})`,
-//             backgroound: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))',
-//             backgroundSize: "cover",
-//             height: "300px",
-//             // width:'400px',
-//             margin: "auto",
-//             position: 'static',
-            
-//         }}
-//         >
-
-//         <h1 className="headline"> art-zibit </h1>
-
-//     </div>
-// }
 
 
 function Footer() {
@@ -57,7 +35,7 @@ function Footer() {
         >
             <div className="design-team">
 
-                <p> &#169; DevCorp 2021 | All Rights Reserved.</p>
+                <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
                 <div className="terms" >
 
                     <li><a href="#" target="_blank">Terms and Conditions |</a> </li>

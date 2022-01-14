@@ -1,9 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import {
-    BrowserRouter as Router,
-    Route, Switch, Link, Redirect
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ExploreButton() {
 
@@ -12,7 +9,7 @@ function ExploreButton() {
             <Link to="/shop" >
 
                 <Button
-                    classNmae="shop-btn"
+                    className="shop-btn"
                     // variant="primary"
                     size="lg"
                     style={{
@@ -23,7 +20,6 @@ function ExploreButton() {
                         padding: '25px',
                         width: '250px',
                         textDecoration: 'none',
-                        // backgroundColor: 'transparent',
                         color: 'white',
                         boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
 

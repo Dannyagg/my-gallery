@@ -46,20 +46,8 @@ function Shop() {
             {itemCard()}
             {itemCard()}
             {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
+         
+          
             
             {/* <Ratings rating='2' />
             <Ratings rating='3' />
@@ -90,7 +78,7 @@ function Shop() {
                 variant="top" src={beFunky}
                 style={{
                     maxWidth: '25rem',
-                    height: '15rem',
+                    height: '20rem',
                     objectFit: 'fill',
                 }} />
 
