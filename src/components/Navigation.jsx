@@ -27,7 +27,7 @@ export default function Navigation(__props) {
                                     height: '80px',
                                     borderRadius: '20px',
                                     boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                                    border: "2px solid purple",
+                                    border: "2px solid #6610f2",
 
                                 }}/>
                         </Link>

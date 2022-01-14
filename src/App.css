@@ -186,12 +186,18 @@ nav > ul > li > a {
 .fa-github {
   background: black;
   color: white;
-  border: 2px solid whitesmoke;
+  /* border: 2px solid whitesmoke; */
 }
 
 .fa-slack {
-  background: black;
-  border: 2px solid purple;
+background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #e73727 45%,
+    #5ce95c 60%,
+    #bb2604 90%
+  );
   color: white;
 }
 

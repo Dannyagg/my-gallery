@@ -46,11 +46,12 @@ function Footer() {
                 <div className="social">
                     <h4> Follow art-zibit </h4>
 
-                    <a href="https://www.facebook.com/ddenasty" target="_blank" className="fa fa-facebook"></a>
-                    <a href="https://twitter.com/SpaceX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" className="fa fa-twitter"></a>
-                    <a href="https://www.linkedin.com/company/spacex/" target="_blank" className="fa fa-linkedin"></a>
-                    <a href="https://www.youtube.com/user/spacexchannel" target="_blank" className="fa fa-youtube"></a>
-                    <a href="https://www.instagram.com/spacex/" target="_blank" className="fa fa-instagram"></a>
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
+                    <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
+                    <a href="#" target="_blank" className="fa fa-facebook"></a>
+                    <a href="#" target="_blank" className="fa fa-twitter"></a>
+                    <a href="#" target="_blank" className="fa fa-youtube"></a>
+                    <a href="#" target="_blank" className="fa fa-instagram"></a>
 
                 </div>
                 {/* <div><img src={logo} alt=" BigCo Inc. logo" /> </div> */}
