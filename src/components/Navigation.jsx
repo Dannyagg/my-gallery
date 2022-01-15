@@ -8,7 +8,6 @@ import About from './About';
 import { Error } from './Error';
 import { BiUser } from "react-icons/bi";
 import { BiCartAlt } from "react-icons/bi";
-import logo2 from '../images/logo2.png';
 import {
     BrowserRouter as Router,
     Route, Switch, Link
@@ -20,18 +19,7 @@ export default function Navigation(__props) {
             <Router>
                 <nav>
                     <ul>
-                        <Link to='/'>
-                            <img src={logo2} alt=" sites-logo" className='navbar-logo'
-                                style={{
-                                    width: '150px',
-                                    height: '80px',
-                                    borderRadius: '20px',
-                                    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                                    border: "2px solid #6610f2",
-
-                                }}/>
-                        </Link>
-
+                       
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -44,11 +32,11 @@ export default function Navigation(__props) {
                         </li>
 
                         <li>
-                            <Link to="/cart"> Cart <BiCartAlt /></Link>
+                            <Link to="/cart"> <BiCartAlt />Cart </Link>
                         </li>
 
                         <li>
-                            <Link to="/login"> Login / Register <BiUser /></Link>
+                            <Link to="/login"><BiUser /> Login / Register </Link>
                         </li>
                     </ul>
 

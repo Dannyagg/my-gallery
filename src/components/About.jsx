@@ -13,12 +13,10 @@ const About = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexWrap: 'wrap',
-                borderRadius: '20px',
-                paddingTop:'10%',
-                paddingBottom:'10%',
-                margin:'3%',
-                background: '#3F172C',
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
+                padding: '10px',
+                margin: 'auto',
+                // background: '#3F172C',
+                // backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
 
             }}
         >
@@ -27,42 +25,116 @@ const About = () => {
 
             <div className="about-photo"
                 style={{
-                    marginBottom: '10px',
-                    background: 'transparent',
+
                     display: 'flex',
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexWrap: 'wrap',
-                    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                    marginLeft: '20px',
-                    borderRight: '1px solid ',
+                    padding: '10px',
+                    
                 }}
             >
-                <img src={Dan} alt="Girl in a jacket" width="500" height="600"
+            <img src={Dan} alt="my photo" 
+
+                style={{
+                    width: '18rem',
+                    height: '25rem',
+                    borderRadius: '20px',
+                    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+                    
+                }}
+            />
+
+            <div className="about-message"
+
+                style={{
+                    maxWidth: '350px',
+                    color: 'white',
+                    margin: 'auto',
+                    padding:'10px',
+                    borderRight:'1px solid'
+                    
+                }}
+            >
+
+                <h2>Daniel Agbenu Jr.</h2>
+
+                <hr />
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minus sunt iste incidunt? Natus architecto labore dignissimos
+                    reprehenderit tenetur aperiam rem dolorum et libero,
+                    dolore quas omnis sit, repellat praesentium nihil! </p>
+
+                <hr />
+
+                <div 
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap',
+                        textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+
+                    }}
+                >
+                    <div className="about-media">
+                        <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
+                        <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
+                        <a href="#" target="_blank" className="fa fa-twitter"></a>
+              
+
+                        <div className="email-me">
+                            <EmailMe
+                                email="borgadee@gmail.com"
+                            />
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+            {/* ABOUT Salina */}
+
+            <div className="about-photo"
+                style={{
+
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    padding: '10px',
+
+                }}
+            >
+                <img src={Salina} alt="my photo"
 
                     style={{
-                        border: '2px solid ',
+                        width: '18rem',
+                        height: '25rem',
                         borderRadius: '20px',
-                        margin: '30px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                        width: '350px',
-                        height: '500px',
+
                     }}
                 />
 
-                <div classNmae="about-message"
+                <div className="about-message"
 
                     style={{
-                        // border: '2px solid red',
-                        width: '400px',
+                        maxWidth: '350px',
                         color: 'white',
-                        margin: '20px',
-                        marginBottom: '10px'
+                        margin: 'auto',
+                        padding: '10px',
+                        borderRight: '1px solid'
+
                     }}
                 >
 
-                    <h1>Daniel Agbenu Jr.</h1>
+                    <h2>Salina Seals</h2>
 
                     <hr />
 
@@ -73,7 +145,7 @@ const About = () => {
 
                     <hr />
 
-                    <div classsName="salina-social"
+                    <div
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
@@ -86,7 +158,7 @@ const About = () => {
                             <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
                             <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
                             <a href="#" target="_blank" className="fa fa-twitter"></a>
-                            <a href="#" target="_blank" className="fa fa-slack"></a>
+
 
                             <div className="email-me">
                                 <EmailMe
@@ -100,87 +172,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-
-            {/* ABOUT SALINA */}
-
-            <div className="about-photo"
-                style={{
-                    marginBottom: '10px',
-                    background: 'transparent',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexWrap: 'wrap',
-                    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                    marginLeft: '10px',
-                    borderRight: '1px solid',
-
-                }}
-            >
-                <img src={Salina} alt="Girl in a jacket" width="500" height="600"
-
-                    style={{
-                        // border: '2px solid red',
-                        borderRadius: '10px',
-                        margin: '30px',
-                        boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-                        width: '350px',
-                        height: '500px',
-                        border: '2px solid ',
-                    }}
-                />
-
-                <div className="about-message"
-
-                    style={{
-                        // border: '2px solid red',
-                        width: '400px',
-                        color: 'white',
-                        margin: '20px',
-                        marginBottom: '10px'
-                    }}
-                >
-
-                    <h1>Salina Seals</h1>
-
-                    <hr />
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Minus sunt iste incidunt? Natus architecto labore dignissimos
-                        reprehenderit tenetur aperiam rem dolorum et libero,
-                        dolore quas omnis sit, repellat praesentium nihil! </p>
-                    <hr />
-                    <div className="salina-social"
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
-
-                        }}
-                    >
-                        <div className="about-media">
-                            <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
-                            <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
-                            <a href="#" target="_blank" className="fa fa-twitter"></a>
-                            <a href="#" target="_blank" className="fa fa-slack"></a>
-
-                            <div className="email-me">
-                                <EmailMe
-                                    email="nina@email.com"
-                                />
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+            
+        </div >
     )
 }
 

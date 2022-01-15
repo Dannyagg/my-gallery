@@ -11,12 +11,12 @@ function Home() {
                 <div className="slogan">
                     <h1
                     style={{
-                        fontSize: '100px',
+
                             textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
-                            margin: '20px'
+                            margin: 'auto'
                     }}
                     
-                    > welcome to art-zibit 
+                    > welcome to art-Zibit 
                     </h1>
                     
                     <h2
