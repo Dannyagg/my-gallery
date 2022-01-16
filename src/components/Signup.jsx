@@ -25,6 +25,7 @@ function Signup() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        e.target.reset();
         console.log('The link was clicked.');
     }
 

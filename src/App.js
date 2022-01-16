@@ -12,55 +12,15 @@ function App() {
 
         <div className="App">
             <Navigation />
-            
-            {Footer()}
             {Comments()}
-            
+
+            {Footer()}
         </div>
 
     );
 }
 
 export default App;
-
-
-function Footer() {
-    return (
-        <div className="footer"
-            style={{
-                marginTop: '300px',
-                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
-              
-            }}
-        >
-            <div className="design-team">
-
-                <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
-                <div className="terms" >
-
-                    <li><a href="#" target="_blank">Terms and Conditions |</a> </li>
-                    <li><a href="#" target="_blank">Cookie Policy </a> </li>
-
-                </div>
-
-                <div className="social">
-                    <h4> Follow art-zibit </h4>
-
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
-                    <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
-                    <a href="#" target="_blank" className="fa fa-facebook"></a>
-                    <a href="#" target="_blank" className="fa fa-twitter"></a>
-                    <a href="#" target="_blank" className="fa fa-youtube"></a>
-                    <a href="#" target="_blank" className="fa fa-instagram"></a>
-
-                </div>
-                {/* <div><img src={logo} alt=" BigCo Inc. logo" /> </div> */}
-            </div>
-
-        </div>
-    )
-}
-
 
 function Comments() {
     const [email, setEmail] = useState('');
@@ -70,14 +30,11 @@ function Comments() {
 
 
     function handleSubmit(e) {
-        e.preventDefault();
+        // e.preventDefault();
+        e.target.reset();
         console.log('The link was clicked.');
     }
 
-    // // function handleClick(e) {
-    // //     e.preventDefault();
-    // //     console.log('The link was clicked.');
-    // }
     return (
 
         <div className="comments"
@@ -85,7 +42,9 @@ function Comments() {
                 display: 'flex',
                 flexDirection: 'column',
                 maxWidth: '500px',
-                margin: '10px auto',
+                marginTop: '300px',
+                marginLeft: 'auto',
+                marginRight: 'auto',
                 padding: '10px',
                 color: 'white',
 
@@ -100,6 +59,7 @@ function Comments() {
 
             <Form
                 onSubmit={handleSubmit}
+            // method='post'
             >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Your email</Form.Label>
@@ -125,14 +85,13 @@ function Comments() {
                     />
                     <Form.Check
                         type="checkbox"
-                        label="Subscribe to art-zibit newletter"
+                        label="Subscribe to art-zibit newsletter"
                         style={{
                             margin: ' 10px auto',
                         }}
 
                     />
                     <Button
-                        // onClick={handleClick}
                         variant="primary"
                         type="submit"
                         size="lg"
@@ -150,9 +109,44 @@ function Comments() {
                 </Form.Group>
             </Form>
 
-            {/* <hr /> */}
 
         </div>
     )
 }
 
+
+function Footer() {
+    return (
+        <div className="footer"
+            style={{
+                marginTop: '20px',
+                textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+
+            }}
+        >
+            <div className="design-team">
+
+                <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
+                <div className="terms" >
+
+                    <li><a href="#" target="_blank">Terms and Conditions |</a> </li>
+                    <li><a href="#" target="_blank">Cookie Policy </a> </li>
+
+                </div>
+
+                <div className="social">
+                    <h4> Follow art-zibit </h4>
+
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
+                    <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
+                    <a href="#" target="_blank" className="fa fa-facebook"></a>
+                    <a href="#" target="_blank" className="fa fa-twitter"></a>
+                    <a href="#" target="_blank" className="fa fa-youtube"></a>
+                    <a href="#" target="_blank" className="fa fa-instagram"></a>
+
+                </div>
+            </div>
+
+        </div>
+    )
+}

@@ -31,9 +31,7 @@ function Shop() {
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 borderRadius: '20px',
-                background: '#3F172C',
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
-
+               
             }}
 
         >
