@@ -14,7 +14,8 @@ const About = () => {
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 padding: '10px',
-                margin: 'auto',
+                marginTop:'200px',
+                // margin: 'auto',
                 // background: '#3F172C',
                 // backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
 
@@ -31,7 +32,7 @@ const About = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexWrap: 'wrap',
-                    padding: '10px',
+                    padding: '50px',
                     
                 }}
             >
@@ -88,7 +89,7 @@ const About = () => {
                             <EmailMe
                                 email="borgadee@gmail.com"
                             />
-
+                               
                         </div>
 
                     </div>

@@ -11,6 +11,7 @@ export default function Cart() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '20px',
+                marginTop: '100px',
             }}
         >
             <div

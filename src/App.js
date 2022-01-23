@@ -13,8 +13,8 @@ function App() {
         <div className="App">
             <Navigation />
             {Comments()}
-
             {Footer()}
+
         </div>
 
     );
@@ -25,13 +25,15 @@ export default App;
 function Comments() {
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const [commentError, setCommentError] = useState('');
+    // const [emailError, setEmailError] = useState('');
+    // const [commentError, setCommentError] = useState('');
 
 
     function handleSubmit(e) {
-        // e.preventDefault();
-        e.target.reset();
+        e.preventDefault();
+        console.log(email, comment);
+        setEmail('');
+        setComment('');
         console.log('The link was clicked.');
     }
 
@@ -42,12 +44,12 @@ function Comments() {
                 display: 'flex',
                 flexDirection: 'column',
                 maxWidth: '500px',
-                marginTop: '300px',
+                marginTop: '100px',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 padding: '10px',
                 color: 'white',
-
+            
             }}
         >
             <h4
@@ -59,12 +61,12 @@ function Comments() {
 
             <Form
                 onSubmit={handleSubmit}
-            // method='post'
             >
                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Your email</Form.Label>
                     <Form.Control
                         type="email"
+                        value={email}
                         // placeholder="enter your email address"
                         onChange={e => setEmail(e.target.value)}
                     />
@@ -80,12 +82,12 @@ function Comments() {
                         as="textarea"
                         rows={3}
                         // placeholder="enter email content" 
-
+                        value={comment}
                         onChange={e => setComment(e.target.value)}
                     />
                     <Form.Check
                         type="checkbox"
-                        label="Subscribe to art-zibit newsletter"
+                        label="Subscribe to artZibit newsletter"
                         style={{
                             margin: ' 10px auto',
                         }}
@@ -94,11 +96,11 @@ function Comments() {
                     <Button
                         variant="primary"
                         type="submit"
-                        size="lg"
                         style={{
                             width: '150px',
                             padding: '20px',
                             margin: '10px auto',
+                            alignItem:'center',
                             justifyContent: 'center',
                             boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px',
                             borderRadius: '20px',
@@ -109,7 +111,6 @@ function Comments() {
                 </Form.Group>
             </Form>
 
-
         </div>
     )
 }
@@ -119,7 +120,7 @@ function Footer() {
     return (
         <div className="footer"
             style={{
-                marginTop: '20px',
+                // marginTop: '20px',
                 textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
 
             }}
@@ -129,8 +130,8 @@ function Footer() {
                 <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
                 <div className="terms" >
 
-                    <li><a href="#" target="_blank">Terms and Conditions |</a> </li>
-                    <li><a href="#" target="_blank">Cookie Policy </a> </li>
+                    <li><a href="https://github.com/Dannyagg" target="_blank">Terms and Conditions |</a> </li>
+                    <li><a href="https://github.com/Dannyagg" target="_blank">Cookie Policy </a> </li>
 
                 </div>
 
@@ -139,10 +140,10 @@ function Footer() {
 
                     <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
                     <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
-                    <a href="#" target="_blank" className="fa fa-facebook"></a>
-                    <a href="#" target="_blank" className="fa fa-twitter"></a>
-                    <a href="#" target="_blank" className="fa fa-youtube"></a>
-                    <a href="#" target="_blank" className="fa fa-instagram"></a>
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-facebook"></a>
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-twitter"></a>
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-youtube"></a>
+                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-instagram"></a>
 
                 </div>
             </div>

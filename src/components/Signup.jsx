@@ -2,32 +2,37 @@ import React from 'react';
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-// import ocean from '../images/ocean.jpg';
-
 
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const [emailError, setEmailError] = useState('');
-    const [passwordError, setPasswordError] = useState('');
+    // const [emailError, setEmailError] = useState('');
+    // const [passwordError, setPasswordError] = useState('');
 
     const [username, setUsername] = useState('');
     const [createNewPassword, setCreateNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
-    const [usernameError, setUsernameError] = useState('');
-    const [createNewPasswordError, setCreateNewPasswordError] = useState('');
-    const [ConfirmPasswordError, setConfirmPasswordError] = useState('');
+    // const [usernameError, setUsernameError] = useState('');
+    // const [createNewPasswordError, setCreateNewPasswordError] = useState('');
+    // const [ConfirmPasswordError, setConfirmPasswordError] = useState('');
 
 
 
     function handleSubmit(e) {
         e.preventDefault();
-        e.target.reset();
+        console.log(email, password, username, createNewPassword, confirmNewPassword);
+        setEmail('');
+        setPassword('');
+        setUsername('')
+        setCreateNewPassword('')
+        setConfirmNewPassword('')
         console.log('The link was clicked.');
     }
+
+   
 
     return (
         <div className="signUp-wrapper"
@@ -41,7 +46,7 @@ function Signup() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 padding: '150px',
-                color:'white'
+                color: 'white'
 
             }}>
 
@@ -63,8 +68,6 @@ function Signup() {
                     }} >
 
                     <Form.Text className="text-muted">
-                  
-
                         <h3
                             style={{
                                 color: 'white',
@@ -76,13 +79,13 @@ function Signup() {
                     </Form.Text>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email"
+                        <Form.Control type="email" placeholder="Enter email" autoComplete="true" value={email} required
                             onChange={e => setEmail(e.target.value)}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password"
+                        <Form.Control type="password" placeholder="Password" autoComplete="true" value={password} required
                             onChange={e => setPassword(e.target.value)}
                         />
                     </Form.Group>
@@ -94,8 +97,17 @@ function Signup() {
                         style={{
                             marginTop: '10px',
                         }}>
-                        Login
+                        Sign In
                     </Button>
+
+                    <div className='google-logins'
+                        style={{
+                            marginTop: '10px',
+
+                        }}>
+                        
+                    </div>
+
                 </Form>
             </div>
 
@@ -119,7 +131,6 @@ function Signup() {
                         <h3
                             style={{
                                 color: 'white',
-                                // textShadow: '4px 4px 4px #aaa',
                                 marginBottom: '30px'
                             }}
                         > Create Account </h3>
@@ -127,21 +138,21 @@ function Signup() {
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email"
+                        <Form.Control type="email" placeholder="Enter email" autoComplete="true" value={username} required
                             onChange={e => setUsername(e.target.value)}
                         />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label> Create New Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password"
+                        <Form.Control type="password" placeholder="Password" value={createNewPassword} autoComplete="true" required
                             onChange={e => setCreateNewPassword(e.target.value)}
                         />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
                         <Form.Label> Confirm Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password"
+                        <Form.Control type="password" placeholder="Password" autoComplete="true" value={confirmNewPassword} required
                             onChange={e => setConfirmNewPassword(e.target.value)}
                         />
                     </Form.Group>
@@ -152,29 +163,12 @@ function Signup() {
                     <Button variant="outline-primary" type="submit"
                         style={{
                             marginTop: '10px',
-                         
+
                         }}>
                         Sign Up
                     </Button>
                 </Form>
             </div>
-
-
-            {/* <div
-            
-                style={{
-                    color: '#6f42c1',
-
-                }}
-            
-            >
-                <h1>email: {email} </h1>
-                <h1>password: {password} </h1>
-                <h1>username: {username} </h1>
-                <h1>createNewPassword: {createNewPassword} </h1>
-                <h1>confirmNewPassword: {confirmNewPassword} </h1>
-
-            </div> */}
 
         </div>
     );

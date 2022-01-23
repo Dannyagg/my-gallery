@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-function ExploreButton() {
+function ShopButton() {
 
     return (
         <>
@@ -31,5 +31,5 @@ function ExploreButton() {
     );
 }
 
-export default ExploreButton
+export default ShopButton
 

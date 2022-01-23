@@ -5,6 +5,7 @@ import Shop from './Shop';
 import Cart from './Cart';
 import Signup from './Signup';
 import About from './About';
+import Test from './Test';
 import { Error } from './Error';
 import { BiUser } from "react-icons/bi";
 import { BiCartAlt } from "react-icons/bi";
@@ -13,16 +14,18 @@ import {
     Route, Switch, Link
 } from 'react-router-dom';
 
+
 export default function Navigation(__props) {
     return (
         <div>
             <Router>
                 <nav>
                     <ul>
-                       
+
                         <li>
                             <Link to="/">Home</Link>
                         </li>
+
                         <li>
                             <Link to="/shop">Shop</Link>
                         </li>
@@ -32,12 +35,37 @@ export default function Navigation(__props) {
                         </li>
 
                         <li>
-                            <Link to="/cart"> <BiCartAlt />Cart </Link>
+                            <Link to="/cart"> Cart <BiCartAlt />
+                                <span
+                                    className="cart-value"
+
+                                    style={{
+                                        display: 'inline',
+                                        position: 'relative',
+                                        bottom: '10px',
+                                        right: '5px',
+                                        borderRadius: '40%',
+                                        backgroundColor: '#6b2702',
+                                        paddingLeft: '4px',
+                                        paddingRight: '4px',
+                                        color: 'white',
+                                        minWidth: '300px',
+
+                                    }}
+                                >07</span>
+
+                            </Link>
+                        </li>
+
+
+                        <li>
+                            <Link to="/login"> <BiUser /> Login/Register </Link>
                         </li>
 
                         <li>
-                            <Link to="/login"><BiUser /> Login / Register </Link>
+                            <Link to="/test">Test</Link>
                         </li>
+
                     </ul>
 
 
@@ -57,6 +85,9 @@ export default function Navigation(__props) {
                         <ShopButton />
                     </Route>
 
+                    <Route path="/test">
+                        <Test />
+                    </Route>
                     <Route path="/about">
                         <About />
                     </Route>
@@ -66,6 +97,7 @@ export default function Navigation(__props) {
                     <Route path="/cart">
                         <Cart />
                     </Route>
+
 
                     <Route path="*">
                         <Error />

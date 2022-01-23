@@ -1,125 +1,131 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import beFunky from '../images/beFunky.jpg';
-import Form from 'react-bootstrap/Form';
-import Ratings from './Ratings';
+// import Ratings from './Ratings'
 
 function Shop() {
 
-    const [price, setPrice] = useState('$1000.00');
-    const [quantity, setQuantity] = useState('');
+    const [storeItems, setStoreItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    function handleSubmit(e) {
-        setQuantity(e.target.value);
-        e.preventDefault();
-        console.log(`the button has been clicked`);
-    }
+    useEffect(() => {
+        getData()
+        async function getData() {
+            const response = await fetch("https://fakestoreapi.com/products/")
+            const data = await response.json()
+            console.log(data)
+            setStoreItems(data)
+            setIsLoading(false)
+        }
 
-    function handleChange(e) {
-        setQuantity(e.target.value);
-        console.log(e.target.value);
-    }
+    }, []);
 
     return (
-        <div className="exibit-wrapper"
-
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                borderRadius: '20px',
-               
-            }}
-
-        >
-
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-          
-
+        <>
+        <div>
+            {isLoading && 
+            
+            <h4> Getting Data </h4>
+            }
         </div>
-    )
 
-    function itemCard() {
-
-        return <Card
-
-            // border="primary"
-            style={{
-                display:'flex',
-                flexWrap:'wrap',
-                width: '25rem',
-                margin: '10px',
-                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                backgroundColor: 'whiteSmoke',
-                borderRadius: '10px',
-                padding: "10px",
-                opacity: '1'
-            }}>
-
-            <Card.Img
-                variant="top" src={beFunky}
+            <div
                 style={{
-                    maxWidth: '60rem',
-                    
-                }} />
-
-            <Card.Body
-
-                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
                     padding: '10px',
-                    // color: 'white'
-                }}>
+                    color: 'white',
+                    textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+                }}
+            >
+                <h1>SHOP </h1>
 
-                <Card.Title>Katana Painting - Japan</Card.Title>
+            </div>
 
-                <Card.Text
+            <div className="wrapper"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    padding: '10px',
+                    color: 'white',
+                }}
 
-                    style={{
+            >
+                {storeItems.map((item) => (
 
-                        marginBottom: "10px",
-                    }}>
+                    <Card key={item.id}
+                        style={{
+                            // background:'#3D3D3D',
+                            borderRadius:'20px',
+                            width: '23rem',
+                            height: '45rem',
+                            display: 'flex',
+                            color: 'black',
+                            margin: '10px',
+                            padding:'20px',
+                            boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
 
-                    Price: {price}
+                        }}>
+                        <Card.Img variant="top" src={item.image}
+                            style={{
+                       
+                                height: '400px',
+                                alignItems: 'center',
+                                paddingBottom:'5px',
+                                borderRadius: '20px',
+                                // boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                                
+                            }} />
 
-                </Card.Text>
-                {/* <Form.Label>select quantity</Form.Label> */}
-                <Form.Select
-                    aria-label="Default select example"
-                    size="sm"
-                    value={quantity}
-                    onChange={handleChange}
-                    style={{
-                        maxWidth: '140px',
-                        marginBottom: "10px",
-                    }}>
-                    <option value="">select quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </Form.Select>
+                        <Card.Body
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Text
+                                style={{
+                                    color: 'black',
+                                    fontSize:'2rem',
+                                }}>
+                                <span>&#36;</span>{item.price}
+                            </Card.Text>
+                            <Card.Text>
+                                rating:{item.rating.rate}
+                            </Card.Text>
 
-                <Button
-                    style={{
-                        maxWidth: '140px',
-                    }}
-                    onClick={handleSubmit}
-                    variant="outline-primary"
-                >add to cart</Button>
-                <Ratings rating='' />
-            </Card.Body>
-        </Card>;
 
-    }
+                            <Card.Text>
+
+                            </Card.Text>
+
+                            <Button variant=""
+                                style={{
+                                    
+                                    backgroundColor: "orange",
+                                    marginTop: 'auto',
+                                    maxWidth: '150px',
+                                }}>add to cart</Button>
+
+                        </Card.Body>
+                    </Card>
+
+                )
+
+                )}
+            </div>
+
+        </>
+
+    )
 }
 
 export default Shop
-
-
