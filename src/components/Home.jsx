@@ -1,5 +1,6 @@
 import React from 'react';
-import ExploreButton from './ShopButton';
+import ShopButton from './ShopButton';
+
 
 function Home() {
 
@@ -11,13 +12,13 @@ function Home() {
                     <h1
                     style={{
                             textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
-                            margin: 'auto',      
-                            justifyContent: 'center',
-                            alignItems:'center', 
+                            margin: 'auto',   
+                            padding:'auto',  
+                          
                                     
                     }}
                     
-                    > welcome to artZibit 
+                    > Welcome to X-zibit 
                     </h1>
                     
                     <h2
@@ -29,9 +30,9 @@ function Home() {
 
                         }}
                     
-                    > dream .. imagine .. create </h2>
+                    > dream .. imagine .. create</h2>
 
-                    < ExploreButton />
+                    < ShopButton />
 
                 </div>
 

@@ -1,10 +1,15 @@
 {
     "cSpell.words": [
+        "Agbenu",
         "browserslist",
         "exibit",
         "Katana",
+        "Offcanvas",
         "Signup",
         "USEPOLLING",
         "zibit"
+    ],
+    "cSpell.ignoreWords": [
+        "reactv"
     ]
 }

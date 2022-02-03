@@ -32,7 +32,7 @@ function Signup() {
         console.log('The link was clicked.');
     }
 
-   
+
 
     return (
         <div className="signUp-wrapper"
@@ -105,7 +105,7 @@ function Signup() {
                             marginTop: '10px',
 
                         }}>
-                        
+
                     </div>
 
                 </Form>

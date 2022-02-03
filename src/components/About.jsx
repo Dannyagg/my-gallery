@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 import Salina from '../images/Salina.jpg';
 import Dan from '../images/Dan.jpg';
@@ -80,8 +83,8 @@ const About = () => {
                     }}
                 >
                     <div className="about-media">
-                        <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
-                        <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
+                        <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github" rel="noreferrer"></a>
+                        <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin" rel="noreferrer"></a>
                         <a href="#" target="_blank" className="fa fa-twitter"></a>
               
 
@@ -156,8 +159,8 @@ const About = () => {
                         }}
                     >
                         <div className="about-media">
-                            <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
-                            <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
+                            <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github" rel="noreferrer"></a>
+                            <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin" rel="noreferrer"></a>
                             <a href="#" target="_blank" className="fa fa-twitter"></a>
 
 

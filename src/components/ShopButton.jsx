@@ -27,6 +27,7 @@ function ShopButton() {
                     SHOP NOW
                 </Button>
             </Link>
+
         </>
     );
 }

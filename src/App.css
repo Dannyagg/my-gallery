@@ -1,22 +1,30 @@
-.App {
-  background: #bd4934;
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
 }
 
-
 body {
-  background: #bd4934;
-  /* font-size: 16px;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("./images/paintbrush.jpg"); 
+    url("./images/paintbrush.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
+  /* background: #bd4934; */
+  font-size: 16px;
+  height: 100%;
 }
 
 html {
-  background: #bd4934;
-  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("./images/paintbrush.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  /* background: #bd4934; */
+  /* height: 100%; */
 }
 /* BANNER */
 
@@ -37,14 +45,6 @@ html {
   /* border: 1px solid rgb(241, 105, 207); */
 }
 
-.banner {
-  display: flex;
-  position: fixed;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 /* NAVBAR */
 
 .nav > ul > li {
@@ -60,7 +60,7 @@ nav > ul {
   flex-wrap: wrap;
   font-size: 1.5rem;
   margin-bottom: 30px;
-  padding-top: 80px;
+  padding-top: 20px;
   align-items: center;
   list-style-type: none;
 }
@@ -72,7 +72,14 @@ nav > ul > li > a {
   align-items: center;
   text-shadow: 0.05em 0.05em 0.2em rgba(10, 10, 10, 0.9);
   margin: 50px;
+  font-size: 16px;
 }
+
+/* HAMBURGER */
+.offcanvas-header>a {
+ padding-left: 1px;
+}
+
 
 /* HOME PAGE */
 
@@ -134,7 +141,7 @@ nav > ul > li > a {
 
 .social {
   padding: 10px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .social h4 {
@@ -142,10 +149,10 @@ nav > ul > li > a {
 }
 
 .fa {
-  padding: 20px;
-  border-radius: 20px;
-  font-size: 30px;
-  width: 70px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 50px;
   text-decoration: none;
   margin: 5px 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -209,14 +216,20 @@ nav > ul > li > a {
   text-decoration: none;
 }
 
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+/* MEDIA QUERIES */
+
+/* If the screen size is 701px wide or more, */
 @media screen and (min-width: 701px) {
   .slogan > h1 {
     font-size: 80px;
   }
+  .slogan {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+/* If the screen size is 700px wide or less, */
 @media screen and (max-width: 700px) {
   .slogan {
     font-size: 40px;
@@ -229,12 +242,19 @@ nav > ul > li > a {
   }
 
   .slogan > h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   nav > ul {
     display: none;
     padding: 50px;
     /* flex-direction: column; */
+  }
+
+  .shop-header {
+    align-content: flex-start;
+    padding: 0;
+    margin-left: 20px;
+    width: 120px;
   }
 }

@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import './App.css';
-import Navigation from './components/Navigation';
+// import Navigation from './components/Navigation';
+import DropNav from './components/DropNav'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
@@ -10,14 +12,17 @@ function App() {
 
     return (
 
-        <div className="App">
-            <Navigation />
+        <>
+        <DropNav />
+         
+            {/* <Navigation /> */}
             {Comments()}
             {Footer()}
 
-        </div>
+        </>
 
     );
+
 }
 
 export default App;
@@ -39,17 +44,17 @@ function Comments() {
 
     return (
 
-        <div className="comments"
+        <div className='comments'
             style={{
                 display: 'flex',
                 flexDirection: 'column',
-                maxWidth: '500px',
+                maxWidth: '400px',
                 marginTop: '100px',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 padding: '10px',
                 color: 'white',
-            
+
             }}
         >
             <h4
@@ -62,48 +67,49 @@ function Comments() {
             <Form
                 onSubmit={handleSubmit}
             >
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
                     <Form.Label>Your email</Form.Label>
                     <Form.Control
-                        type="email"
+                        type='email'
                         value={email}
-                        // placeholder="enter your email address"
+                        // placeholder='enter your email address'
                         onChange={e => setEmail(e.target.value)}
                     />
 
-                    <Form.Text className="text-muted">
+                    <Form.Text className='text-muted'>
                         We'll never share your email with anyone else.
                     </Form.Text>
 
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
                     <Form.Label>Comment</Form.Label>
                     <Form.Control
-                        as="textarea"
+                        as='textarea'
                         rows={3}
-                        // placeholder="enter email content" 
+                        // placeholder='enter email content' 
                         value={comment}
                         onChange={e => setComment(e.target.value)}
                     />
                     <Form.Check
-                        type="checkbox"
-                        label="Subscribe to artZibit newsletter"
+                        type='checkbox'
+                        label='Subscribe to artZibit newsletter'
                         style={{
                             margin: ' 10px auto',
                         }}
 
                     />
                     <Button
-                        variant="primary"
-                        type="submit"
+                        variant='primary'
+                        type='submit'
                         style={{
-                            width: '150px',
-                            padding: '20px',
+                            hover: 'black',
+                            width: '100px',
+                            padding: '15px',
                             margin: '10px auto',
-                            alignItem:'center',
+                            alignItem: 'center',
                             justifyContent: 'center',
                             boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px',
-                            borderRadius: '20px',
+                            borderRadius: '10px',
 
                         }}>
                         POST
@@ -118,36 +124,37 @@ function Comments() {
 
 function Footer() {
     return (
-        <div className="footer"
+        <div className='footer'
             style={{
                 // marginTop: '20px',
                 textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
 
             }}
         >
-            <div className="design-team">
+            <div className='design-team'>
 
                 <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
-                <div className="terms" >
+                <div className='terms' >
 
-                    <li><a href="https://github.com/Dannyagg" target="_blank">Terms and Conditions |</a> </li>
-                    <li><a href="https://github.com/Dannyagg" target="_blank">Cookie Policy </a> </li>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Terms and Conditions |</a> </li>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Cookie Policy </a> </li>
 
                 </div>
 
-                <div className="social">
-                    <h4> Follow art-zibit </h4>
+                <div className='social'>
+                    <h4> Follow X-zibit </h4>
 
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-github"></a>
-                    <a href="https://www.linkedin.com/in/daniel-a-5a9294149/" target="_blank" className="fa fa-linkedin"></a>
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-facebook"></a>
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-twitter"></a>
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-youtube"></a>
-                    <a href="https://github.com/Dannyagg" target="_blank" className="fa fa-instagram"></a>
+                    <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-github' rel="noreferrer"></a>
+                    <a href='https://www.linkedin.com/in/daniel-a-5a9294149/' target='_blank' className='fa fa-linkedin' rel="noreferrer"></a>
+                    <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-facebook' rel="noreferrer"></a>
+                    <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-twitter' rel="noreferrer"></a>
+                    <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-youtube' rel="noreferrer"></a>
+                    <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-instagram' rel="noreferrer"></a>
 
                 </div>
             </div>
 
         </div>
     )
+
 }

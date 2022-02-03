@@ -1,6 +1,6 @@
 import React from 'react';
-import ShopButton from './ShopButton';
 import Home from './Home';
+import ShopButton from './ShopButton';
 import Shop from './Shop';
 import Cart from './Cart';
 import Signup from './Signup';
@@ -9,6 +9,7 @@ import Test from './Test';
 import { Error } from './Error';
 import { BiUser } from "react-icons/bi";
 import { BiCartAlt } from "react-icons/bi";
+
 import {
     BrowserRouter as Router,
     Route, Switch, Link
@@ -16,9 +17,11 @@ import {
 
 
 export default function Navigation(__props) {
+    const cartValue = '5'
+
     return (
         <div>
-            <Router>
+            <Router >
                 <nav>
                     <ul>
 
@@ -35,31 +38,33 @@ export default function Navigation(__props) {
                         </li>
 
                         <li>
-                            <Link to="/cart"> Cart <BiCartAlt />
+                            <Link to="/cart"
+
+
+                            > Cart <BiCartAlt />
+
                                 <span
                                     className="cart-value"
-
                                     style={{
                                         display: 'inline',
                                         position: 'relative',
-                                        bottom: '10px',
-                                        right: '5px',
+                                        // bottom: '12px',
+                                        // right: '5px',
                                         borderRadius: '40%',
-                                        backgroundColor: '#6b2702',
-                                        paddingLeft: '4px',
-                                        paddingRight: '4px',
+                                        backgroundColor: 'orange',
+                                        padding: '2px 4px',
                                         color: 'white',
-                                        minWidth: '300px',
-
+                                        // minWidth: '300px',
+                                        fontSize: '15px'
                                     }}
-                                >07</span>
+                                >{cartValue}</span>
 
                             </Link>
                         </li>
 
 
                         <li>
-                            <Link to="/login"> <BiUser /> Login/Register </Link>
+                            <Link to="/signup"> <BiUser /> Login/Register </Link>
                         </li>
 
                         <li>
@@ -91,13 +96,12 @@ export default function Navigation(__props) {
                     <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/login">
+                    <Route path="/signup">
                         <Signup />
                     </Route>
                     <Route path="/cart">
                         <Cart />
                     </Route>
-
 
                     <Route path="*">
                         <Error />
