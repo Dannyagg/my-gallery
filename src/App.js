@@ -13,8 +13,7 @@ function App() {
     return (
 
         <>
-        <DropNav />
-         
+            <DropNav />
             {/* <Navigation /> */}
             {Comments()}
             {Footer()}
@@ -49,7 +48,7 @@ function Comments() {
                 display: 'flex',
                 flexDirection: 'column',
                 maxWidth: '400px',
-                marginTop: '100px',
+                // marginTop: '100px',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 padding: '10px',
@@ -136,13 +135,14 @@ function Footer() {
                 <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
                 <div className='terms' >
 
-                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Terms and Conditions |</a> </li>
-                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Cookie Policy </a> </li>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Terms and Conditions</a>
+                    </li>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer"> Cookie Policy </a> </li>
 
                 </div>
 
                 <div className='social'>
-                    <h4> Follow X-zibit </h4>
+                    <h5> Follow X-zibit </h5>
 
                     <a href='https://github.com/Dannyagg' target='_blank' className='fa fa-github' rel="noreferrer"></a>
                     <a href='https://www.linkedin.com/in/daniel-a-5a9294149/' target='_blank' className='fa fa-linkedin' rel="noreferrer"></a>

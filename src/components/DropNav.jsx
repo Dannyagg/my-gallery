@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 // import Button from 'react-bootstrap/Button'
 import {
     BrowserRouter as Router,
-    Route, Switch, Link
+    Route, Switch, 
 } from 'react-router-dom';
 
 import Home from './Home';
@@ -21,45 +21,62 @@ function DropNav() {
     return (
 
         <>
-            <Navbar bg="light" expand={false}
+            <Navbar bg="" expand={false}
             >
                 <Container fluid>
-                    <Navbar.Brand>
-                        <Nav.Link href="/"
-                            style={{
-                                textDecoration: 'none',
-                                color: 'purple',
-                                fontWeight: 'bold',
-                            }}>
-                            X-zibit
-                        </Nav.Link>
-                    </Navbar.Brand>
+                      <Navbar.Brand>
+                            <Nav.Link href="/"
+                                style={{
+                                    textDecoration: 'none',
+                                    fontWeight: 'bold',
+                                    color: 'white',
+                                }}>
+                                Xzibit
+
+                            </Nav.Link>
+                        </Navbar.Brand>
+
+                    <div className='nav-mid'
+                        style={{
+                            alignItem:'center',
+                            display: 'flex',
+                            flexDirection: 'row',
+                            textDecoration: 'none',
+                            color: 'magenta',   
+                        }}
+                    >
+                      
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/shop">Shop</Nav.Link>
+                        <Nav.Link href="/cart">Cart</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                    </div>
 
                     <Navbar.Toggle aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas
                         id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel"
                         placement="end">
-                        
-                        <Offcanvas.Header closeButton>
+
+                        <Offcanvas.Header closeButton >
                             <Nav.Link href="/"
                                 style={{
                                     textDecoration: 'none',
-                                    color: 'purple',
+                                    color: 'magenta',
                                     fontWeight: 'bold',
                                 }}>
-                                X-zibit
+                                Xzibit
                             </Nav.Link>
 
                         </Offcanvas.Header>
-                        
+
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link href="/">Home</Nav.Link>
                                 <Nav.Link href="/shop">Shop</Nav.Link>
                                 <Nav.Link href="/cart">Cart</Nav.Link>
                                 <Nav.Link href="/about">About</Nav.Link>
-                            </Nav>    
+                            </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                 </Container>

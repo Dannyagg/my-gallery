@@ -52,6 +52,8 @@ function Signup() {
 
             <div>
                 <Form
+                    action='login'
+                    method='post'
                     onSubmit={handleSubmit}
                     style={{
                         background: '#195E59',
@@ -113,6 +115,8 @@ function Signup() {
 
             <div>
                 <Form
+                    action='login'
+                    method='post'
                     onSubmit={handleSubmit}
                     style={{
                         background: '#195E59',

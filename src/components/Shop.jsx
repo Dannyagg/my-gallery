@@ -25,9 +25,7 @@ function Shop() {
     }, []);
 
     return (
-        <>
-
-           
+        <>           
             <div
                 className="shop-header"
                 style={{
@@ -78,7 +76,7 @@ function Shop() {
                     <Card key={item.id}
                         bg='light'
                         style={{
-                            borderRadius: '0.25rem',
+                            borderRadius: '20px',
                             width: '20rem',
                             height: '27rem',
                             display: 'flex',
@@ -159,7 +157,7 @@ function Shop() {
                     margin: 'auto',
                     color: 'black',
                     background: 'white',
-                    borderRadius: '0.25rem',
+                    borderRadius: '20px',
                     maxWidth: '20rem',
                     boxShadow: "rgba(14, 14, 14, 0.16) 0px 1px 4px",
 
@@ -203,7 +201,8 @@ function Cart() {
             }}
 
         >
-            <Card style={{
+            <Card 
+            style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 flexDirection: 'row',
@@ -213,6 +212,7 @@ function Cart() {
                 boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                 width: '60rem',
                 maxWidth: '60rem',
+                borderRadius: '20px',
             }}>
                 <Card.Img variant="" src="https://images.unsplash.com/photo-1526570207772-784d36084510?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80"
                     style={{
@@ -224,7 +224,6 @@ function Cart() {
                     }}
                 />
                 <Card.Body
-
                     style={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -241,10 +240,12 @@ function Cart() {
                     <Card.Text>
                         quantity
                     </Card.Text>
+
                     <Button variant=""
                         style={{
                             maxWidth: '120px',
                             backgroundColor: "orange",
+                            
                         }}
                     >delete item</Button>
                 </Card.Body>

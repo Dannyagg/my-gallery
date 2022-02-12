@@ -13,21 +13,20 @@ function Home() {
                     style={{
                             textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                             margin: 'auto',   
-                            padding:'auto',  
-                          
-                                    
+                            padding:'auto', 
+                            
                     }}
                     
-                    > Welcome to X-zibit 
+                    > Welcome to Xzibit 
                     </h1>
                     
                     <h2
                         style={{
+                            display: 'flex',
                             textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                             justifyContent: 'center',
-                            alignItems: 'center',
-                            margin: 'auto',  
-
+                            align: 'center',
+                            margin: 'auto', 
                         }}
                     
                     > dream .. imagine .. create</h2>
