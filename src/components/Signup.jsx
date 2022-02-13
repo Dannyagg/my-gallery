@@ -45,7 +45,7 @@ function Signup() {
                 flexWrap: 'wrap',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '150px',
+                marginTop: '40px',
                 color: 'white'
 
             }}>
@@ -57,15 +57,16 @@ function Signup() {
                     onSubmit={handleSubmit}
                     style={{
                         background: '#195E59',
-                        // backgroundOpacity: 0.5,
                         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5))',
-                        marginRight: '5px',
-                        marginBottom: '5px',
-                        padding: '50px',
-                        width: '400px',
+                        // margin:'auto',
+                        padding: '40px',
+                        maxWidth: '400px',
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         borderRadius: '10px',
+                        justifyContent: 'center',
+                        alignItem: 'center',
+                       
 
                     }} >
 
@@ -123,7 +124,7 @@ function Signup() {
                         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))',
                         marginRight: '5px',
                         marginBottom: '5px',
-                        padding: '50px',
+                        padding: '40px',
                         width: '400px',
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',

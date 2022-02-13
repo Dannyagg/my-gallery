@@ -29,7 +29,7 @@ function DropNav() {
                                 style={{
                                     textDecoration: 'none',
                                     fontWeight: 'bold',
-                                    color: 'white',
+                                    color: '#ec6969',
                                 }}>
                                 Xzibit
 
@@ -42,13 +42,15 @@ function DropNav() {
                             display: 'flex',
                             flexDirection: 'row',
                             textDecoration: 'none',
-                            color: 'magenta',   
+                            color: 'magenta',
+                            gap: '2rem'     
                         }}
                     >
                       
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/shop">Shop</Nav.Link>
                         <Nav.Link href="/cart">Cart</Nav.Link>
+                        <Nav.Link href="/signup">Login</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
                     </div>
 
@@ -62,7 +64,7 @@ function DropNav() {
                             <Nav.Link href="/"
                                 style={{
                                     textDecoration: 'none',
-                                    color: 'magenta',
+                                    color: '#ff3515',
                                     fontWeight: 'bold',
                                 }}>
                                 Xzibit
@@ -76,6 +78,7 @@ function DropNav() {
                                 <Nav.Link href="/shop">Shop</Nav.Link>
                                 <Nav.Link href="/cart">Cart</Nav.Link>
                                 <Nav.Link href="/about">About</Nav.Link>
+                                <Nav.Link href="/signup">Login</Nav.Link>
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>

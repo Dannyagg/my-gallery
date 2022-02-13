@@ -48,7 +48,7 @@ function Comments() {
                 display: 'flex',
                 flexDirection: 'column',
                 maxWidth: '400px',
-                // marginTop: '100px',
+                marginTop: '200px',
                 marginLeft: 'auto',
                 marginRight: 'auto',
                 padding: '10px',
