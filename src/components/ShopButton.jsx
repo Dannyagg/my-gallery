@@ -15,7 +15,6 @@ function ShopButton() {
                     style={{
                         textTransform: 'uppercase',
                         borderRadius: '20px',
-                        // border: '3px solid purple',
                         marginTop: '40px',
                         padding: '25px',
                         width: '250px',

@@ -14,14 +14,10 @@ const About = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
-                alignItems: 'center',
+                alignItems: 'flex-start',
                 flexWrap: 'wrap',
-                padding: '10px',
-                marginTop:'200px',
-                // margin: 'auto',
-                // background: '#3F172C',
-                // backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9))',
-
+                margin:'80px auto 100px auto',
+                minHeight: 'calc(100vh - 34px)',
             }}
         >
 
@@ -35,7 +31,8 @@ const About = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexWrap: 'wrap',
-                    padding: '50px',
+                    padding: '20px',
+              
                     
                 }}
             >
@@ -53,11 +50,12 @@ const About = () => {
             <div className="about-message"
 
                 style={{
-                    maxWidth: '350px',
+                    maxWidth: '300px',
                     color: 'white',
                     margin: 'auto',
                     padding:'10px',
-                    borderRight:'1px solid'
+                    borderRight:'1px solid',
+                    
                     
                 }}
             >
@@ -111,7 +109,7 @@ const About = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     flexWrap: 'wrap',
-                    padding: '10px',
+                    padding: '20px',
 
                 }}
             >
@@ -121,6 +119,7 @@ const About = () => {
                         width: '18rem',
                         height: '25rem',
                         borderRadius: '20px',
+                        // border:'5px solid #ec6969',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
 
                     }}
@@ -129,7 +128,7 @@ const About = () => {
                 <div className="about-message"
 
                     style={{
-                        maxWidth: '350px',
+                        maxWidth: '300px',
                         color: 'white',
                         margin: 'auto',
                         padding: '10px',

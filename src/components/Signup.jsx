@@ -23,19 +23,18 @@ function Signup() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(email, password, username, createNewPassword, confirmNewPassword);
         setEmail('');
         setPassword('');
         setUsername('')
         setCreateNewPassword('')
         setConfirmNewPassword('')
-        console.log('The link was clicked.');
+        console.log('The button was clicked.');
     }
 
 
 
     return (
-        <div className="signUp-wrapper"
+        <div id="signUp-wrapper"
             style={{
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -45,9 +44,10 @@ function Signup() {
                 flexWrap: 'wrap',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '40px',
-                color: 'white'
-
+                margin:'auto',
+                color: 'white',
+                minHeight: 'calc(100vh - 34px)'
+                
             }}>
 
             <div>
@@ -58,16 +58,14 @@ function Signup() {
                     style={{
                         background: '#195E59',
                         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5))',
-                        // margin:'auto',
-                        padding: '40px',
+                        marginBottom: '5px',
+                        padding: '20px',
                         maxWidth: '400px',
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         borderRadius: '10px',
                         justifyContent: 'center',
                         alignItem: 'center',
-                       
-
                     }} >
 
                     <Form.Text className="text-muted">
@@ -122,13 +120,12 @@ function Signup() {
                     style={{
                         background: '#195E59',
                         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9))',
-                        marginRight: '5px',
-                        marginBottom: '5px',
-                        padding: '40px',
-                        width: '400px',
+                        padding: '20px',
+                        maxWidth: '400px',
                         height: '600px',
                         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
                         borderRadius: '10px',
+                     
 
                     }} >
 

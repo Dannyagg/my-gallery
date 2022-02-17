@@ -1,6 +1,7 @@
 import React from 'react';
 import ShopButton from './ShopButton';
 import igorMiske from '../images/igorMiske.jpg';
+import Comments from './Comments';
 
 
 function Home() {
@@ -23,9 +24,9 @@ function Home() {
                 <img src={igorMiske} alt="hero-image"
                     style={{
                         maxWidth: '100%',
-                        width:'800px',
+                        width: '800px',
                         borderRadius: '2rem',
-                        marginTop:'40px'
+                        marginTop: '40px'
 
                     }}
 
@@ -37,10 +38,9 @@ function Home() {
                     <h1
                         style={{
                             textShadow: '#fff9f9 0em 0em 5em',
-                            // textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                             margin: 'auto',
                             padding: 'auto',
-                            color:'#ec6969'
+                            color: '#ec6969'
 
                         }}
 
@@ -54,7 +54,7 @@ function Home() {
                             justifyContent: 'center',
                             align: 'center',
                             margin: 'auto',
-                            color:'#ffffff9e'
+                            color: '#ffffff9e'
                         }}
 
                     > dream .. imagine .. create</h2>
@@ -64,10 +64,11 @@ function Home() {
 
                 </div>
 
-
+            </div>
+            <div>
+                <Comments />
 
             </div>
-
         </>
 
     )
@@ -79,4 +80,3 @@ export default Home
 
 
 
-  
