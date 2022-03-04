@@ -102,6 +102,9 @@ export default function Navigation(__props) {
                     <Route path="/cart">
                         <Cart />
                     </Route>
+                    <Route path="/test">
+                        <Test />
+                    </Route>
 
                     <Route path="*">
                         <Error />

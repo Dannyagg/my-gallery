@@ -1,31 +1,17 @@
 import React from 'react';
-import { useState, useEffect } from 'react'
+import { useContext, useState } from 'react'
+import { ProductsContext } from '../context/productsContext'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import ReactLoading from 'react-loading';
-// import Ratings from './Ratings'
 
 function Shop() {
-
-    const [storeItems, setStoreItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [totalPrice, setTotalPrice] = useState('$0.00')
-
-
-    useEffect(() => {
-        getData()
-        async function getData() {
-            const response = await fetch("https://fakestoreapi.com/products?limit=2")
-            const data = await response.json()
-            console.log(data)
-            setStoreItems(data)
-            setIsLoading(false)
-        }
-
-    }, []);
+    const { items, setItems } = useContext(ProductsContext)
+   
+    // const [totalPrice, setTotalPrice] = useState('$0.00')
 
     return (
         <>
+       
             <div
                 className="shop-header"
                 style={{
@@ -39,26 +25,11 @@ function Shop() {
                     textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                 }}
             >
-                <h1>SHOP </h1>
+                <h1>SHOP</h1>
 
             </div>
 
-            <div
-                className="loading"
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-
-                }}
-            >
-                {isLoading &&
-
-                    <ReactLoading type={'bubbles'} color='white' height={'20%'} width={'20%'} />
-                }
-            </div>
-
-
+           
             <div className="card-wrapper"
                 style={{
                     display: 'flex',
@@ -69,10 +40,9 @@ function Shop() {
                     padding: '10px',
                     color: 'white',
                     minHeight: 'calc(100vh - 34px)',
-                }}
+                }}>
 
-            >
-                {storeItems.map((item) => (
+                {items.map((item) => (
 
                     <Card key={item.id}
                         bg='light'
@@ -120,7 +90,7 @@ function Shop() {
                                 <span>&#36;</span>{item.price}
                             </Card.Text>
 
-                            <Card.Text
+                            {/* <Card.Text
 
                                 style={{
                                     color: 'black',
@@ -128,7 +98,7 @@ function Shop() {
                                 }}>
 
                                 rating:{item.rating.rate}
-                            </Card.Text>
+                            </Card.Text> */}
 
                             <Button variant=""
                                 style={{
@@ -143,9 +113,11 @@ function Shop() {
                 )
 
                 )}
+
+
             </div>
 
-            <div
+            {/* <div
                 className="order-summary"
                 style={{
 
@@ -178,7 +150,7 @@ function Shop() {
                     }}>proceed to checkout
                 </Button>
 
-            </div>
+            </div> */}
 
         </>
 

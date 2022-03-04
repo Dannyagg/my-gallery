@@ -1,126 +1,36 @@
-import React, { useState } from 'react';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import beFunky from '../images/beFunky.jpg';
-import Form from 'react-bootstrap/Form';
-import Ratings from './Ratings';
+// import React from 'react'
+// import { useContext, useState } from 'react'
+// import { ProductsContext } from '../context/productsContext'
+// import Card from 'react-bootstrap/Card';
+// import Button from 'react-bootstrap/Button';
 
-function Test() {
+// const Test = () => {
+//     const { items, setItems } = useContext(ProductsContext)
+//     return (
 
-    const [price, setPrice] = useState('$1000.00');
-    const [quantity, setQuantity] = useState('');
+//         <div
+//             style={{
+//                 display: 'flex',
+//                 flexDirection: 'row',
+//                 justifyContent: 'center',
+//                 alignItems: 'flex-start',
+//                 flexWrap: 'wrap',
+//                 padding: '10px',
+//                 color: 'white', minHeight: 'calc(100vh - 34px)',
+//             }}
 
-    function handleSubmit(e) {
-        setQuantity(e.target.value);
-        e.preventDefault();
-       setPrice('');
-       setQuantity('');
-        console.log(`the button has been clicked`);
-    }
+//         >
+//             <h1>Test</h1>
 
-    function handleChange(e) {
-        setQuantity(e.target.value);
-        console.log(e.target.value);
-    }
+//             {items.map((item) => (
+//                 <h5 key={item.id}>
 
-    return (
-        <div className="exibit-wrapper"
+//                     {item.title}
+//                 </h5>
+//             ))}
+//         </div >
 
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                borderRadius: '20px',
-                marginTop: '200px',
-            }}
+//     )
+// }
 
-        >
-
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-            {itemCard()}
-
-
-        </div>
-    )
-
-    function itemCard() {
-
-        return <Card
-
-            // border="primary"
-            style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                maxWidth: '20rem',
-                margin: '10px',
-                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-                backgroundColor: 'whiteSmoke',
-                borderRadius: '10px',
-                padding: "10px",
-                opacity: '0.9'
-            }}>
-
-            <Card.Img
-                variant="top" src={beFunky}
-                style={{
-                    maxWidth: '60rem',
-
-                }} />
-
-            <Card.Body
-
-                style={{
-                    padding: '10px',
-                    // color: 'white'
-                }}>
-
-                <Card.Title>Katana Painting - Japan</Card.Title>
-
-                <Card.Text
-
-                    style={{
-                        marginBottom: "10px",
-                    }}>
-
-                    Price: {price}
-
-                </Card.Text>
-                {/* <Form.Label>select quantity</Form.Label> */}
-                <Form.Select
-                    aria-label="Default select example"
-                    size="sm"
-                    value={quantity}
-                    onChange={handleChange}
-                    style={{
-                        maxWidth: '140px',
-                        marginBottom: "10px",
-                    }}>
-                    <option value="">select quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </Form.Select>
-
-                <Button
-                    style={{
-                        maxWidth: '140px',
-                    }}
-                    onClick={handleSubmit}
-                    variant="outline-primary"
-                >add to cart</Button>
-                <Ratings rating='' />
-            </Card.Body>
-        </Card>;
-
-    }
-}
-
-export default Test
-
-
+// export default Test

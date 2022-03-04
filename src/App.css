@@ -58,7 +58,6 @@ nav > ul > li > a {
   margin: auto;
 }
 
-
 .offcanvas-header {
   background: whitesmoke;
 }
@@ -79,6 +78,9 @@ a.nav-link {
 
 a.nav-link:hover {
   color: #ec6969;
+}
+.cart-btn.btn:hover{
+  background-color: #ec6969;
 }
 
 .offcanvas-body {
@@ -284,18 +286,12 @@ a.nav-link:hover {
   }
 
   .shop-header {
-    align-content: flex-start;
+    align-content: center;
+    justify-content: center;
     padding: 0;
-    margin-left: 20px;
-    width: 120px;
+    margin: auto;
   }
   .nav-mid {
     display: none !important;
   }
-
-  .navbar-brand > a.nav-link {
-    display: none;
-  }
-
- 
 }

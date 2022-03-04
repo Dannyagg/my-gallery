@@ -3,6 +3,7 @@ import Home from './Home';
 import ShopButton from './ShopButton';
 import Shop from './Shop';
 import Cart from './Cart';
+// import Test from './Test';
 import Signup from './Signup';
 import About from './About';
 import { Error } from './Error'
@@ -28,8 +29,7 @@ function DropNav() {
     return (
 
         <>
-            <Navbar bg="" expand={false}
-            >
+            <Navbar bg="" expand={false} >
                 <Container fluid>
                     <Navbar.Brand>
                         <Nav.Link href="/"
@@ -58,12 +58,12 @@ function DropNav() {
 
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/shop">Shop</Nav.Link>
-                        <Nav.Link href="/signup"> <BiUser />Login</Nav.Link>
                         <Nav.Link href="/about">About</Nav.Link>
 
                         <Nav.Link href="/cart">
 
                             <Button variant=""
+                                className='cart-btn'
                                 style={{
                                     color: 'white',
                                     alignItems: 'center',
@@ -79,8 +79,8 @@ function DropNav() {
                                         backgroundColor: 'whitesmoke',
                                         borderRadius: '20px',
                                         padding: '0px 7px',
-                                       
-                                       
+
+
                                     }}
 
                                 >{cartItemNumber} </span>
@@ -88,6 +88,9 @@ function DropNav() {
 
                         </Nav.Link>
 
+                        <Nav.Link href="/signup"> <BiUser />Login</Nav.Link>
+
+                        {/* <Nav.Link href="/test">Test</Nav.Link> */}
 
                     </div>
 
@@ -113,35 +116,37 @@ function DropNav() {
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link href="/">Home</Nav.Link>
                                 <Nav.Link href="/shop">Shop</Nav.Link>
+                                <Nav.Link href="/about">About</Nav.Link>
                                 <Nav.Link href="/cart">
 
                                     <Button variant=""
-                                style={{
-                                    color: 'white',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    padding:'0',
-                                  
-                                }}> Cart <BiCartAlt />
-                                <span
-                                    style={{
-                                        position: 'relative',
-                                        bottom: '8px',
-                                        right: '6px',
-                                        fontWeight: 'bold',
-                                        color: 'black',
-                                        backgroundColor: 'whitesmoke',
-                                        borderRadius: '20px',
-                                        padding: '0px 7px',
-            
-                                    }}
+                                        className="cart-btn"
+                                        style={{
+                                            color: 'white',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            padding: '0',
 
-                                >{cartItemNumber} </span>
-                            </Button>
+                                        }}> Cart <BiCartAlt />
+                                        <span
+                                            style={{
+                                                position: 'relative',
+                                                bottom: '8px',
+                                                right: '6px',
+                                                fontWeight: 'bold',
+                                                color: 'black',
+                                                backgroundColor: 'whitesmoke',
+                                                borderRadius: '20px',
+                                                padding: '0px 7px',
+
+                                            }}
+
+                                        >{cartItemNumber} </span>
+                                    </Button>
 
                                 </Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
                                 <Nav.Link href="/signup">Login</Nav.Link>
+                                {/* <Nav.Link href="/test">Test</Nav.Link> */}
                             </Nav>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
@@ -173,6 +178,9 @@ function DropNav() {
                     <Route path="/cart">
                         <Cart />
                     </Route>
+                    {/* <Route path="/test">
+                        <Test />
+                    </Route> */}
 
                     <Route path="*">
                         <Error />
