@@ -4,7 +4,7 @@ import {
 
 } from '../actions'
 
-const productReducer = (state, action) => {
+const Store = (state, action) => {
     switch (action.type) {
         case GET_ALL_PRODUCTS:
             return (
@@ -16,4 +16,4 @@ const productReducer = (state, action) => {
 
 }
 
-export default productReducer
+export default Store

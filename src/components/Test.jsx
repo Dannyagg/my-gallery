@@ -34,3 +34,18 @@
 // }
 
 // export default Test
+
+{/* <div
+    className="loading"
+    style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    }}
+>
+    {isLoading &&
+
+        <ReactLoading type={'bubbles'} color='white' height={'20%'} width={'20%'} />
+    }
+</div> */}

@@ -160,6 +160,8 @@ a.nav-link:hover {
   text-align: center;
   color: white;
   margin-bottom: 0px;
+  /* background-color: #bd4934; */
+  background: linear-gradient(rgba(67, 60, 60, 0.183), rgb(3, 3, 3));
 }
 
 .social {
@@ -290,8 +292,15 @@ a.nav-link:hover {
     justify-content: center;
     padding: 0;
     margin: auto;
+   
   }
   .nav-mid {
     display: none !important;
+  }
+
+  .about-message > h2 {
+    display:flex;
+    justify-content: center;
+    align-items:center;
   }
 }

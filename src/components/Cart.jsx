@@ -1,8 +1,12 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { useContext, useState } from 'react'
+// import { ProductsContext } from '../context/productsContext'
 
 function Cart() {
+    // const { addToCart, removeFromCart } = useContext(ProductsContext)
+
     return (
 
         <div className="cart-wrapper"
@@ -53,8 +57,7 @@ function Cart() {
                     <Card.Text>
                         quantity
                     </Card.Text>
-
-
+                   
                 </Card.Body>
 
                 <Button variant=""

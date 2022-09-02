@@ -1,6 +1,6 @@
 import React from 'react'
 import { createContext, useContext, useState, useEffect } from 'react'
-import ReactLoading from 'react-loading';
+// import ReactLoading from 'react-loading';
 
 export const ProductsContext = React.createContext(null);
 
@@ -11,40 +11,44 @@ export const ProductsProvider = ({ children }) => {
     useEffect(() => {
         getData()
         async function getData() {
-            const response = await fetch("https://fakestoreapi.com/products?limit=5")
+            const response = await fetch("https://fakestoreapi.com/products?limit=10")
             const products = await response.json()
             setItems(products)
             console.log(products)
             setIsLoading(false)
-            
+
         }
 
     }, []);
 
+    const productDetail = (message) => {
+            console.log('for detail of products')
+    }
+
+    const addToCart = () => {
+            console.log('add from cart')
+    }
+    const removeFromCart = () => {
+
+            console.log('removing from cart')
+    }
+
     return (
-        <ProductsContext.Provider value={{ items, setItems, isLoading, setIsLoading }}>
+        <ProductsContext.Provider value={{
+            items, setItems,
+            productDetail,
+            addToCart,
+            removeFromCart
+
+        }}>
             {children}
-            
-            <div
-                className="loading"
-                style={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-
-                }}
-            >
-                {isLoading &&
-
-                    <ReactLoading type={'bubbles'} color='white' height={'20%'} width={'20%'} />
-                }
-            </div>
 
         </ProductsContext.Provider>
 
     )
 
 }
+export const ProductsConsumer = ProductsContext.Consumer
 
 
 

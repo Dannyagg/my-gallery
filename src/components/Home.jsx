@@ -21,7 +21,7 @@ function Home() {
 
                 }}
             >
-                <img src={igorMiske} alt="hero-image"
+                <img src={igorMiske} alt="hero"
                     style={{
                         maxWidth: '100%',
                         width: '800px',

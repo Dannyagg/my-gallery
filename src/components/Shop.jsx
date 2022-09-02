@@ -6,12 +6,12 @@ import Button from 'react-bootstrap/Button';
 
 function Shop() {
     const { items, setItems } = useContext(ProductsContext)
-   
+
     // const [totalPrice, setTotalPrice] = useState('$0.00')
 
     return (
         <>
-       
+
             <div
                 className="shop-header"
                 style={{
@@ -19,9 +19,9 @@ function Shop() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    marginTop:'-10px',
                     flexWrap: 'wrap',
-                    padding: '10px',
-                    color: 'white',
+                    color: 'white', backgroundColor: '#e9b0482b',
                     textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                 }}
             >
@@ -29,7 +29,7 @@ function Shop() {
 
             </div>
 
-           
+
             <div className="card-wrapper"
                 style={{
                     display: 'flex',
