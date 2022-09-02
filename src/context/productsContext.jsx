@@ -11,7 +11,7 @@ export const ProductsProvider = ({ children }) => {
     useEffect(() => {
         getData()
         async function getData() {
-            const response = await fetch("https://fakestoreapi.com/products?limit=10")
+            const response = await fetch("https://fakestoreapi.com/products?limit=9")
             const products = await response.json()
             setItems(products)
             console.log(products)
