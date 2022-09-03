@@ -17,8 +17,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import Container from 'react-bootstrap/Container'
 
 import {
-    BrowserRouter as Router,
-    Route, Switch,
+    Route, Routes
 } from 'react-router-dom';
 ;
 
@@ -153,42 +152,30 @@ function DropNav() {
                 </Container>
             </Navbar>
 
-            <Router>
+            <Routes>
 
-                <Switch>
+                <Route>
 
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
+                    <Route path="/" element={<Home />} />
 
-                    <Route path="/shop">
-                        <Shop />
-                    </Route>
+                    <Route path="/shop" element={<Shop />} />
 
-                    <Route path="/shop">
-                        <ShopButton />
-                    </Route>
+                    <Route path="/shop" element={<ShopButton />} />
 
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/signup">
-                        <Signup />
-                    </Route>
-                    <Route path="/cart">
-                        <Cart />
-                    </Route>
-                    {/* <Route path="/test">
-                        <Test />
-                    </Route> */}
+                    {/* <Route path="/test" element={<Test />} /> */}
 
-                    <Route path="*">
-                        <Error />
-                    </Route>
+                    <Route path="/about" element={<About />} />
 
-                </Switch>
+                    <Route path="/signup" element={<Signup />} />
 
-            </Router>
+                    <Route path="/cart" element={<Cart />} />
+
+                    {/* <Route path="/test" element={<Test />} /> */}
+
+                    <Route path="*" element={<Error />} />
+                </Route>
+
+            </Routes>
 
         </>
 

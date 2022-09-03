@@ -4,7 +4,6 @@ import './App.css';
 import DropNav from './components/DropNav'
 import Footer from './components/Footer';
 
-
 function App() {
 
     return (

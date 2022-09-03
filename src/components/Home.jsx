@@ -3,7 +3,6 @@ import ShopButton from './ShopButton';
 import igorMiske from '../images/igorMiske.jpg';
 import Comments from './Comments';
 
-
 function Home() {
 
     return (
@@ -69,8 +68,8 @@ function Home() {
                 <Comments />
 
             </div>
-        </>
 
+        </>
     )
 
 }

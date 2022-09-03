@@ -156,6 +156,7 @@ a.nav-link:hover {
   color: white;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   color: white;
@@ -239,6 +240,10 @@ a.nav-link:hover {
 .email-me a {
   text-shadow: 0.05em 0.05em 0.2em rgba(10, 10, 10, 0.9);
   text-decoration: none;
+}
+
+.design-team > p {
+font-size: 12px;
 }
 
 /* MEDIA QUERIES */

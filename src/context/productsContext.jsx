@@ -21,12 +21,12 @@ export const ProductsProvider = ({ children }) => {
 
     }, []);
 
-    const productDetail = (message) => {
+    const productDetail = () => {
             console.log('for detail of products')
     }
 
     const addToCart = () => {
-            console.log('add from cart')
+            console.log('add to cart')
     }
     const removeFromCart = () => {
 

@@ -8,7 +8,6 @@ function Footer() {
                 position: 'relative',
                 left: '0',
                 bottom: '0',
-
             }}
         >
 
@@ -24,13 +23,12 @@ function Footer() {
 
             </div>
             <div className='design-team'>
-
-                <p> &copy; {new Date().getFullYear()}  DevCorp | All Rights Reserved.</p>
+                <p> &copy; {new Date().getFullYear()}  Daniel Agbenu | All Rights Reserved.</p>
                 <div className='terms' >
 
-                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer">Terms and Conditions</a>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noopener noreferrer">Terms and Conditions</a>
                     </li>
-                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noreferrer"> Cookie Policy </a> </li>
+                    <li><a href='https://github.com/Dannyagg' target='_blank' rel="noopener noreferrer"> Cookie Policy </a> </li>
 
                 </div>
             </div>

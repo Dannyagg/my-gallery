@@ -9,22 +9,16 @@ import Test from './Test';
 import { Error } from './Error';
 import { BiUser } from "react-icons/bi";
 import { BiCartAlt } from "react-icons/bi";
-
-import {
-    BrowserRouter as Router,
-    Route, Switch, Link
-} from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 
 
 export default function Navigation(__props) {
     const cartValue = '5'
-
     return (
-        <div>
-            <Router >
+        <>
+            <Routes>
                 <nav>
                     <ul>
-
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -38,10 +32,7 @@ export default function Navigation(__props) {
                         </li>
 
                         <li>
-                            <Link to="/cart"
-
-
-                            > Cart <BiCartAlt />
+                            <Link to="/cart"> Cart <BiCartAlt />
 
                                 <span
                                     className="cart-value"
@@ -62,7 +53,6 @@ export default function Navigation(__props) {
                             </Link>
                         </li>
 
-
                         <li>
                             <Link to="/signup"> <BiUser /> Login/Register </Link>
                         </li>
@@ -73,46 +63,34 @@ export default function Navigation(__props) {
 
                     </ul>
 
-
                 </nav>
 
-                <Switch>
+                <Routes>
+                    <Route>
+                        <Route path="/" element={<Home />} />
 
-                    <Route exact path="/">
-                        <Home />
-                    </Route>
+                        <Route path="/shop" element={<Shop />} />
 
-                    <Route path="/shop">
-                        <Shop />
-                    </Route>
+                        <Route path="/shop" element={<ShopButton />} />
 
-                    <Route path="/shop">
-                        <ShopButton />
-                    </Route>
+                        <Route path="/test" element={<Test />} />
 
-                    <Route path="/test">
-                        <Test />
-                    </Route>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/signup">
-                        <Signup />
-                    </Route>
-                    <Route path="/cart">
-                        <Cart />
-                    </Route>
-                    <Route path="/test">
-                        <Test />
+                        <Route path="/about" element={<About />} />
+
+                        <Route path="/signup" element={<Signup />} />
+
+                        <Route path="/cart" element={<Cart />} />
+
+                        <Route path="/test" element={<Test />} />
+
+                        <Route path="*" element={<Error />} />
+
                     </Route>
 
-                    <Route path="*">
-                        <Error />
-                    </Route>
+                </Routes>
+            </Routes>
 
-                </Switch>
-
-            </Router>
-        </div>
+        </>
     )
+
 }
