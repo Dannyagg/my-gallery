@@ -7,7 +7,7 @@ import Cart from './Cart';
 import Signup from './Signup';
 import About from './About';
 import { Error } from './Error'
-import { useState } from 'react';
+// import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { BiUser } from "react-icons/bi";
 import { BiCartAlt } from "react-icons/bi";
@@ -15,6 +15,8 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Offcanvas from 'react-bootstrap/Offcanvas'
 import Container from 'react-bootstrap/Container'
+import { ProductsContext } from '../context/ProductsContext';
+import { useContext } from 'react';
 
 import {
     Route, Routes
@@ -22,8 +24,9 @@ import {
 ;
 
 function DropNav() {
+    const { cartItems } = useContext(ProductsContext)
 
-    const [cartItemNumber, setCartItemNumber] = useState('0')
+    // const [cartItemNumber, setCartItemNumber] = useState('0')
 
     return (
 
@@ -57,7 +60,7 @@ function DropNav() {
 
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/shop">Shop</Nav.Link>
-                        <Nav.Link href="/about">About</Nav.Link>
+                        
 
                         <Nav.Link href="/cart">
 
@@ -74,7 +77,7 @@ function DropNav() {
                                         bottom: '8px',
                                         right: '3px',
                                         fontWeight: 'bold',
-                                        color: 'black',
+                                        color: '#803906',
                                         backgroundColor: 'whitesmoke',
                                         borderRadius: '20px',
                                         padding: '0px 7px',
@@ -82,12 +85,15 @@ function DropNav() {
 
                                     }}
 
-                                >{cartItemNumber} </span>
+                                >{cartItems.length}</span>
                             </Button>
 
                         </Nav.Link>
+                        
+                        <Nav.Link href="/about">About</Nav.Link>
 
                         <Nav.Link href="/signup"> <BiUser />Login</Nav.Link>
+
 
                         {/* <Nav.Link href="/test">Test</Nav.Link> */}
 
@@ -115,7 +121,7 @@ function DropNav() {
                             <Nav className="justify-content-end flex-grow-1 pe-3">
                                 <Nav.Link href="/">Home</Nav.Link>
                                 <Nav.Link href="/shop">Shop</Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
+                                
                                 <Nav.Link href="/cart">
 
                                     <Button variant=""
@@ -133,17 +139,18 @@ function DropNav() {
                                                 bottom: '8px',
                                                 right: '6px',
                                                 fontWeight: 'bold',
-                                                color: 'black',
+                                                color: '#803906',
                                                 backgroundColor: 'whitesmoke',
                                                 borderRadius: '20px',
                                                 padding: '0px 7px',
 
                                             }}
 
-                                        >{cartItemNumber} </span>
+                                        >{cartItems.length} </span>
                                     </Button>
 
                                 </Nav.Link>
+                                <Nav.Link href="/about">About</Nav.Link>
                                 <Nav.Link href="/signup">Login</Nav.Link>
                                 {/* <Nav.Link href="/test">Test</Nav.Link> */}
                             </Nav>
@@ -162,15 +169,13 @@ function DropNav() {
 
                     <Route path="/shop" element={<ShopButton />} />
 
-                    {/* <Route path="/test" element={<Test />} /> */}
-
                     <Route path="/about" element={<About />} />
 
                     <Route path="/signup" element={<Signup />} />
 
                     <Route path="/cart" element={<Cart />} />
 
-                    {/* <Route path="/test" element={<Test />} /> */}
+                    {/* <Route path="/checkout" element={<Checkout />} /> */}
 
                     <Route path="*" element={<Error />} />
                 </Route>

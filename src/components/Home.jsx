@@ -8,6 +8,25 @@ function Home() {
     return (
 
         <>
+
+            <div
+                className="shop-header"
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: '-10px',
+                    flexWrap: 'wrap',
+                    color: 'white',
+                    backgroundColor: '#e9b14814',
+                    textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+
+                }}
+            >
+                <h1>Home</h1>
+
+            </div>
             <div
                 className='hero-img'
                 style={{
@@ -23,9 +42,9 @@ function Home() {
                 <img src={igorMiske} alt="hero"
                     style={{
                         maxWidth: '100%',
-                        width: '800px',
+                        width: '700px',
                         borderRadius: '2rem',
-                        marginTop: '40px'
+                        marginTop: '30px'
 
                     }}
 

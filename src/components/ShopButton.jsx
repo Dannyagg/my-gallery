@@ -10,12 +10,12 @@ function ShopButton() {
 
                 <Button
                     className="shop-btn"
-                    // variant="primary"
+                    variant="primary"
                     size="lg"
                     style={{
                         textTransform: 'uppercase',
                         borderRadius: '20px',
-                        marginTop: '40px',
+                        marginTop: '20px',
                         padding: '25px',
                         width: '250px',
                         textDecoration: 'none',

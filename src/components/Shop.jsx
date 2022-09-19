@@ -1,14 +1,14 @@
 import React from 'react';
-import { useContext, useState } from 'react'
-import { ProductsContext } from '../context/productsContext'
+import { useContext } from 'react'
+import { ProductsContext } from '../context/ProductsContext'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function Shop() {
-    const { items, setItems } = useContext(ProductsContext)
 
-    // const [totalPrice, setTotalPrice] = useState('$0.00')
-
+    const { items } = useContext(ProductsContext)
+    const { Add } = useContext(ProductsContext)
+    
     return (
         <>
 
@@ -19,16 +19,17 @@ function Shop() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop:'-10px',
+                    marginTop: '-10px',
                     flexWrap: 'wrap',
-                    color: 'white', backgroundColor: '#e9b0482b',
+                    color: 'white',
+                    backgroundColor: '#e9b14814',
                     textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
+
                 }}
             >
-                <h1>SHOP</h1>
+                <h1>Shop</h1>
 
             </div>
-
 
             <div className="card-wrapper"
                 style={{
@@ -40,117 +41,92 @@ function Shop() {
                     padding: '10px',
                     color: 'white',
                     minHeight: 'calc(100vh - 34px)',
+
                 }}>
 
-                {items.map((item) => (
-
-                    <Card key={item.id}
-                        bg='light'
-                        style={{
-                            borderRadius: '20px',
-                            width: '20rem',
-                            height: '27rem',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            color: 'black',
-                            margin: '10px',
-                            padding: '10px',
-                            maxWidth: '20rem',
-                            boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-
-                        }}>
-                        <Card.Img variant="top" src={item.image}
+                {items && items.map(({ category, description, id, image, price, rating, title }) => {
+                    return (
+                        <Card
+                            key={id}
+                            bg='light'
                             style={{
-                                height: '200px',
-                                width: '180px',
-                                margin: 'auto'
-                            }} />
-
-                        <Card.Body
-                            style={{
-                                margin: 'auto',
-                                // padding:'auto 0',
+                                borderRadius: '10px',
+                                width: '18rem',
+                                height: '25rem',
                                 display: 'flex',
                                 flexDirection: 'column',
-                            }}
-                        >
-                            <Card.Title
+                                color: 'black',
+                                margin: '10px',
+                                padding: '10px',
+                                maxWidth: '20rem',
+                                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
 
+                            }}>
+                            <Card.Img variant="top" src={image}
                                 style={{
-                                    color: 'black',
-                                    fontSize: '14px'
-                                }}>
-                                {item.title}</Card.Title>
+                                    height: '200px',
+                                    width: '180px',
+                                    margin: 'auto'
+                                }} />
 
-                            <Card.Text
+                            <Card.Body
                                 style={{
-                                    color: 'black',
-                                    fontSize: '1rem',
-                                }}>
-                                <span>&#36;</span>{item.price}
-                            </Card.Text>
+                                    margin: 'auto',
+                                    // padding:'auto 0',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                }}
+                            >
+                                <Card.Title
 
-                            {/* <Card.Text
+                                    style={{
+                                        color: 'black',
+                                        fontSize: '14px'
+                                    }}>
+                                    {title}</Card.Title>
 
-                                style={{
-                                    color: 'black',
-                                    fontSize: '14px',
-                                }}>
+                                <Card.Text
 
-                                rating:{item.rating.rate}
-                            </Card.Text> */}
+                                    style={{
+                                        color: 'black',
+                                        fontSize: '1rem',
+                                        fontWeight: 'bold',
+                                    }}>
+                                    <span>&#36;</span>
+                                    {price}
+                                </Card.Text>
+
+                                <Card.Text
+                                    style={{
+                                        color: 'orange',
+                                        fontSize: '14px',
+                                    }}>
+                                    Rating: {rating.rate}
+                                </Card.Text>
+
+                            </Card.Body>
 
                             <Button variant=""
+                                key={id}
+                                onClick={() => Add({ price, title })}
                                 style={{
-                                    backgroundColor: "orange",
+                                    backgroundColor: '#fb8d79',
+                                    borderRadius: '10px',
                                     marginTop: 'auto',
                                     maxWidth: '120px',
+                                    boxShadow: "rgba(14, 14, 14, 0.16) 0px 1px 4px",
                                 }}>add to cart
                             </Button>
-                        </Card.Body>
-                    </Card>
+                        </Card>
 
-                )
+                        
+
+                    );
+                }
 
                 )}
 
-
             </div>
-
-            {/* <div
-                className="order-summary"
-                style={{
-
-                    display: 'flex',
-                    flexDirection: 'column',
-                    flexWrap: 'wrap',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '10px',
-                    margin: '40px auto 100px auto',
-                    color: 'black',
-                    background: 'white',
-                    borderRadius: '20px',
-                    maxWidth: '20rem',
-                    boxShadow: "rgba(14, 14, 14, 0.16) 0px 1px 4px",
-
-                }}>
-                <h4>
-                    Order Summary
-                </h4>
-                <h6>
-                    Subtotal= {totalPrice}
-                </h6>
-
-                <Button variant=""
-                    style={{
-                        backgroundColor: "orange",
-                        marginTop: '10px',
-                        maxWidth: '200px',
-                    }}>proceed to checkout
-                </Button>
-
-            </div> */}
 
         </>
 
@@ -158,4 +134,51 @@ function Shop() {
 }
 
 export default Shop
+
+
+//     <>
+//     { cartItems && cartItems.map(({ price, title }) => {
+
+//         return (
+//             <>
+//                 <Cart
+//                     price={price}
+//                     title={title}
+//                 />
+//             </>
+//         )
+//     }
+//     )}
+//             </>
+
+// {/* <div
+//                 className="order-summary"
+//                 style={{
+//                     display: 'flex',
+//                     flexDirection: 'column',
+//                     flexWrap: 'wrap',
+//                     justifyContent: 'center',
+//                     alignItems: 'center',
+//                     padding: '10px',
+//                     margin: '40px auto 100px auto',
+//                     color: 'black',
+//                     background: 'white',
+//                     borderRadius: '20px',
+//                     maxWidth: '20rem',
+//                     boxShadow: "rgba(14, 14, 14, 0.16) 0px 1px 4px",
+//                 }}>
+//                 <h4>
+//                     Order Summary
+//                 </h4>
+//                 <h6>
+//                     Subtotal= {totalPrice}
+//                 </h6>
+//                 <Button variant=""
+//                     style={{
+//                         backgroundColor: "orange",
+//                         marginTop: '10px',
+//                         maxWidth: '200px',
+//                     }}>proceed to checkout
+//                 </Button>
+//             </div> */}
 

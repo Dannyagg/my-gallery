@@ -5,14 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
-import { ProductsProvider } from './context/productsContext';
+import { ProductsProvider } from './context/ProductsContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ProductsProvider>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <BrowserRouter>
+      
+        <App />
+  
+    </BrowserRouter>
   </ProductsProvider>
 );
 
