@@ -8,7 +8,7 @@ function Shop() {
 
     const { items } = useContext(ProductsContext)
     const { Add } = useContext(ProductsContext)
-    
+
     return (
         <>
 
@@ -38,11 +38,12 @@ function Shop() {
                     justifyContent: 'center',
                     alignItems: 'flex-start',
                     flexWrap: 'wrap',
-                    padding: '10px',
-                    color: 'white',
+                    // margin:'auto',
                     minHeight: 'calc(100vh - 34px)',
+                }}
 
-                }}>
+
+            >
 
                 {items && items.map(({ category, description, id, image, price, rating, title }) => {
                     return (
@@ -72,7 +73,6 @@ function Shop() {
                             <Card.Body
                                 style={{
                                     margin: 'auto',
-                                    // padding:'auto 0',
                                     display: 'flex',
                                     flexDirection: 'column',
                                 }}
@@ -119,9 +119,8 @@ function Shop() {
                             </Button>
                         </Card>
 
-                        
-
                     );
+
                 }
 
                 )}
@@ -135,50 +134,4 @@ function Shop() {
 
 export default Shop
 
-
-//     <>
-//     { cartItems && cartItems.map(({ price, title }) => {
-
-//         return (
-//             <>
-//                 <Cart
-//                     price={price}
-//                     title={title}
-//                 />
-//             </>
-//         )
-//     }
-//     )}
-//             </>
-
-// {/* <div
-//                 className="order-summary"
-//                 style={{
-//                     display: 'flex',
-//                     flexDirection: 'column',
-//                     flexWrap: 'wrap',
-//                     justifyContent: 'center',
-//                     alignItems: 'center',
-//                     padding: '10px',
-//                     margin: '40px auto 100px auto',
-//                     color: 'black',
-//                     background: 'white',
-//                     borderRadius: '20px',
-//                     maxWidth: '20rem',
-//                     boxShadow: "rgba(14, 14, 14, 0.16) 0px 1px 4px",
-//                 }}>
-//                 <h4>
-//                     Order Summary
-//                 </h4>
-//                 <h6>
-//                     Subtotal= {totalPrice}
-//                 </h6>
-//                 <Button variant=""
-//                     style={{
-//                         backgroundColor: "orange",
-//                         marginTop: '10px',
-//                         maxWidth: '200px',
-//                     }}>proceed to checkout
-//                 </Button>
-//             </div> */}
 

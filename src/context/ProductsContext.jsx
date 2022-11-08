@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState, useEffect, createContext } from 'react'
 import ReactLoading from 'react-loading';
-import Cart from '../components/Cart';
-// import Button from 'react-bootstrap/Button';
+
 
 export const ProductsContext = createContext(null);
 export const ProductsProvider = ({ children }) => {
@@ -12,16 +11,14 @@ export const ProductsProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
 
     useEffect(() => {
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }, [cartItems]);
+        const data = window.localStorage.getItem('cartItems');
+        if (data !== null) setCartItems(JSON.parse(data));
 
+    }, []);
 
     useEffect(() => {
-        const cartItems = JSON.parse(localStorage.getItem('cartItems'));
-        if (cartItems) {
-            setCartItems(cartItems);
-        }
-    }, []);
+        window.localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
 
     useEffect(() => {
         async function getData() {
@@ -36,13 +33,9 @@ export const ProductsProvider = ({ children }) => {
 
     }, []);
 
-    function Add({ price, title }) {
-        setCartItems((prevState) => [...prevState, { price, title }]);
+    function Add({ price, title, image}) {
+        setCartItems((prevState) => [...prevState, { price, title, image}]);
 
-        // return <Cart 
-        // price={price}
-        // title={title}
-        // />
     }
 
     return (
@@ -60,4 +53,3 @@ export const ProductsProvider = ({ children }) => {
 }
 
 export const ProductsConsumer = ProductsContext.Consumer
-

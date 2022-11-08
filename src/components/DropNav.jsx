@@ -26,8 +26,6 @@ import {
 function DropNav() {
     const { cartItems } = useContext(ProductsContext)
 
-    // const [cartItemNumber, setCartItemNumber] = useState('0')
-
     return (
 
         <>
@@ -60,8 +58,6 @@ function DropNav() {
 
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/shop">Shop</Nav.Link>
-                        
-
                         <Nav.Link href="/cart">
 
                             <Button variant=""
@@ -86,6 +82,7 @@ function DropNav() {
                                     }}
 
                                 >{cartItems.length}</span>
+                                
                             </Button>
 
                         </Nav.Link>

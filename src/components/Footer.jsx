@@ -7,7 +7,9 @@ function Footer() {
                 textShadow: '0.05em 0.05em 0.2em rgba(10,10,10,0.9)',
                 position: 'relative',
                 left: '0',
+                right:'0',
                 bottom: '0',
+                width: '100%'
             }}
         >
 

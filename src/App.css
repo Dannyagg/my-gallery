@@ -73,7 +73,6 @@ a.nav-link:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: calc(100vh - 34px); */
 }
 
 .slogan {
@@ -91,16 +90,6 @@ a.nav-link:hover {
 .slogan > Button {
   margin: 10px;
 }
-
-/* SHOP NOW */
-/* 
-.shop-btn.btn.btn-primary.btn-lg::after {
-  content: "\2192"; 
-  font-weight: bold;
-}
-.shop-btn.btn.btn-primary.btn-lg:hover {
-  background-color:transparent;
-} */
 
 /* SIGN-UP WRAPPER */
 
@@ -131,7 +120,6 @@ a.nav-link:hover {
   text-align: center;
   color: white;
   margin-bottom: 0px;
-  /* background-color: #bd4934; */
   background: linear-gradient(rgba(67, 60, 60, 0.183), rgb(3, 3, 3));
 }
 
@@ -259,7 +247,6 @@ font-size: 12px;
   nav > ul {
     display: none;
     padding: 50px;
-    /* flex-direction: column; */
   }
 
   .shop-header {
